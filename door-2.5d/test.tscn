@@ -1,0 +1,15 @@
+[gd_scene load_steps=2 format=3 uid="uid://da2m66ahp4xef"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_1m8gm"]
+font_size = 120
+
+[node name="test" type="Node2D"]
+
+[node name="Label" type="Label" parent="."]
+offset_left = 107.0
+offset_top = 376.0
+offset_right = 1148.0
+offset_bottom = 591.0
+rotation = -0.420778
+text = "TTTTEEEESSSTTT!!!"
+label_settings = SubResource("LabelSettings_1m8gm")
