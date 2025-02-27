@@ -1,0 +1,137 @@
+[gd_scene load_steps=12 format=3 uid="uid://cosaxj7lmjsfe"]
+
+[ext_resource type="Texture2D" uid="uid://cmbnuib8o5qh1" path="res://sprites/ffloor.png" id="1_4s5y0"]
+[ext_resource type="Texture2D" uid="uid://c7pq57w1yxoxu" path="res://sprites/waall.png" id="2_wskm5"]
+[ext_resource type="PackedScene" path="res://plr.tscn" id="3_2iro3"]
+[ext_resource type="Texture2D" uid="uid://dy3euhp8vb6d7" path="res://sprites/shop.png" id="4_u8ek8"]
+
+[sub_resource type="Environment" id="Environment_cwo46"]
+background_mode = 2
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_qqx2v"]
+albedo_texture = ExtResource("1_4s5y0")
+uv1_scale = Vector3(0.3, 0.1, 0.3)
+uv1_triplanar = true
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_vriec"]
+material = SubResource("StandardMaterial3D_qqx2v")
+size = Vector2(16, 8)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_qxgu2"]
+albedo_texture = ExtResource("2_wskm5")
+uv1_scale = Vector3(0.3, 0.1, 0.3)
+uv1_triplanar = true
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_hjmtv"]
+material = SubResource("StandardMaterial3D_qxgu2")
+size = Vector2(16, 8)
+
+[sub_resource type="WorldBoundaryShape3D" id="WorldBoundaryShape3D_ylnud"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_w2py1"]
+size = Vector3(3.40375, 3.14136, 1.81238)
+
+[node name="ShopROOM" type="Node3D"]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_cwo46")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(0.995359, -0.0413165, 0.0869067, 0, 0.903133, 0.429361, -0.096228, -0.427368, 0.898942, 0, 2.72066, -12.3382)
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.927589, 0.373603, 0, -0.373603, 0.927589, 0, 2.94195, 6.16447)
+
+[node name="CharacterBody3D" parent="." instance=ExtResource("3_2iro3")]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="."]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D"]
+mesh = SubResource("PlaneMesh_vriec")
+skeleton = NodePath("../..")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 1.53995, -4)
+mesh = SubResource("PlaneMesh_hjmtv")
+skeleton = NodePath("../..")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
+shape = SubResource("WorldBoundaryShape3D_ylnud")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, -4)
+shape = SubResource("WorldBoundaryShape3D_ylnud")
+
+[node name="Shop" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -4)
+
+[node name="Sprite3D" type="Sprite3D" parent="Shop"]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 0, 2.7055, 0.1)
+texture_filter = 0
+texture = ExtResource("4_u8ek8")
+hframes = 5
+
+[node name="Sprite3D2" type="Sprite3D" parent="Shop"]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 0, 2.706, 0.2)
+texture_filter = 0
+texture = ExtResource("4_u8ek8")
+hframes = 5
+frame = 1
+
+[node name="hands" type="Node3D" parent="Shop"]
+
+[node name="Sprite3D" type="Sprite3D" parent="Shop/hands"]
+transform = Transform3D(4, 0, 0, 0, 3.74735, 1.39906, 0, -1.39906, 3.74735, -0.19715, 1.79547, 0.438884)
+texture_filter = 0
+texture = ExtResource("4_u8ek8")
+hframes = 5
+frame = 3
+
+[node name="Sprite3D5" type="Sprite3D" parent="Shop/hands/Sprite3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.00224125, 0.00600302)
+texture_filter = 0
+texture = ExtResource("4_u8ek8")
+hframes = 5
+frame = 4
+
+[node name="Sprite3D3" type="Sprite3D" parent="Shop/hands"]
+transform = Transform3D(4, 0, 0, 0, 3.74735, 1.39906, 0, -1.39906, 3.74735, -1.18613, 1.82927, 0.438884)
+texture_filter = 0
+texture = ExtResource("4_u8ek8")
+hframes = 5
+frame = 2
+
+[node name="Sprite3D5" type="Sprite3D" parent="Shop/hands/Sprite3D3"]
+transform = Transform3D(0.967339, 0.237477, 0.0886614, -0.237477, 0.971334, -0.0107023, -0.0886614, -0.0107023, 0.996004, 0.0562474, -0.00038147, 0.00102198)
+texture_filter = 0
+texture = ExtResource("4_u8ek8")
+hframes = 5
+frame = 4
+
+[node name="Sprite3D4" type="Sprite3D" parent="Shop/hands"]
+transform = Transform3D(4, 0, 0, 0, 3.74735, 1.39906, 0, -1.39906, 3.74735, 1.31365, 1.82927, 0.438884)
+flip_h = true
+texture_filter = 0
+texture = ExtResource("4_u8ek8")
+hframes = 5
+frame = 2
+
+[node name="Sprite3D5" type="Sprite3D" parent="Shop/hands/Sprite3D4"]
+transform = Transform3D(0.972634, -0.217667, -0.0812654, 0.217667, 0.975982, -0.00896713, 0.0812654, -0.00896698, 0.996652, -0.0557331, -0.00364113, 0.00975263)
+flip_h = true
+texture_filter = 0
+texture = ExtResource("4_u8ek8")
+hframes = 5
+frame = 4
+
+[node name="Sprite3D2" type="Sprite3D" parent="Shop/hands"]
+transform = Transform3D(4, 0, 0, 0, 3.74735, 1.39906, 0, -1.39906, 3.74735, 0.215811, 1.79547, 0.438884)
+flip_h = true
+texture_filter = 0
+texture = ExtResource("4_u8ek8")
+hframes = 5
+frame = 3
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Shop"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0782776, 1.07068, 0.406189)
+shape = SubResource("BoxShape3D_w2py1")
