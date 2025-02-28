@@ -3,7 +3,7 @@
 [ext_resource type="Script" path="res://plr.gd" id="1_rlbvw"]
 [ext_resource type="Texture2D" uid="uid://8n71kg3ftr6h" path="res://icon.svg" id="2_iiuqp"]
 [ext_resource type="Script" path="res://node.gd" id="3_w2aeo"]
-[ext_resource type="PackedScene" uid="uid://dmy0ww4x0eksh" path="res://inventory.tscn" id="4_ixcqc"]
+[ext_resource type="PackedScene" path="res://inventory.tscn" id="4_ixcqc"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_76q7x"]
 size = Vector3(1.08728, 1.09961, 0.15097)
