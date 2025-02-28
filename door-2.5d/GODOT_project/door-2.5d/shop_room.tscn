@@ -1,0 +1,577 @@
+[gd_scene load_steps=17 format=3 uid="uid://cosaxj7lmjsfe"]
+
+[ext_resource type="Texture2D" uid="uid://cmbnuib8o5qh1" path="res://sprites/ffloor.png" id="1_4s5y0"]
+[ext_resource type="Texture2D" uid="uid://c7pq57w1yxoxu" path="res://sprites/waall.png" id="2_wskm5"]
+[ext_resource type="PackedScene" uid="uid://cs5j87fcgs00y" path="res://plr.tscn" id="3_2iro3"]
+[ext_resource type="Texture2D" uid="uid://dy3euhp8vb6d7" path="res://sprites/shop.png" id="4_u8ek8"]
+[ext_resource type="Texture2D" uid="uid://8n71kg3ftr6h" path="res://icon.svg" id="5_jmiuo"]
+[ext_resource type="Texture2D" uid="uid://bm2swmekw0jav" path="res://sprites/doors.png" id="6_uihdt"]
+
+[sub_resource type="Environment" id="Environment_cwo46"]
+background_mode = 2
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_qqx2v"]
+albedo_texture = ExtResource("1_4s5y0")
+uv1_scale = Vector3(0.3, 0.1, 0.3)
+uv1_triplanar = true
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_vriec"]
+material = SubResource("StandardMaterial3D_qqx2v")
+size = Vector2(16, 8)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_qxgu2"]
+albedo_texture = ExtResource("2_wskm5")
+uv1_scale = Vector3(0.3, 0.1, 0.3)
+uv1_triplanar = true
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_hjmtv"]
+material = SubResource("StandardMaterial3D_qxgu2")
+size = Vector2(16, 6)
+
+[sub_resource type="WorldBoundaryShape3D" id="WorldBoundaryShape3D_ylnud"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_w2py1"]
+size = Vector3(3.40375, 3.14136, 1.81238)
+
+[sub_resource type="Animation" id="Animation_t1oif"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Shop/Sprite3D2:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Shop/Sprite3D2:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 2.706, 0.2)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Shop/hands:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 1.16987, -2.39772)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Shop/hands:rotation")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0, 0)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Shop/hands/Sprite3D3:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(-0.51753, 1.82927, 0.438884)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Shop/hands/Sprite3D4:position")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0.507132, 1.82927, 0.438884)]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("Shop/hands/Sprite3D/Sprite3D5:visible")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("Shop/hands/Sprite3D3/Sprite3D5:visible")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("Shop/hands/Sprite3D4/Sprite3D5:visible")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("Shop/hands/Sprite3D2/Sprite3D5:visible")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/10/type = "value"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("Shop/hands/Sprite3D/Node3D:visible")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/11/type = "value"
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/path = NodePath("Shop/hands/Sprite3D3/Node3D2:visible")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/12/type = "value"
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/path = NodePath("Shop/hands/Sprite3D4/Node3D3:visible")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/13/type = "value"
+tracks/13/imported = false
+tracks/13/enabled = true
+tracks/13/path = NodePath("Shop/hands/Sprite3D2/Node3D2:visible")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
+[sub_resource type="Animation" id="Animation_jr7nb"]
+resource_name = "open"
+length = 2.0
+step = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Shop/Sprite3D2:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(0, 0, 0), Vector3(-1.00428, 0, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Shop/Sprite3D2:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(0, 2.706, 0.2), Vector3(0, 3.32443, 1.14292)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Shop/hands:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.6, 1.4),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector3(0, 1.16987, -2.39772), Vector3(0, 1.90853, -0.989753), Vector3(0, 0.122783, 0.137514)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Shop/hands:rotation")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0, 0)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Shop/hands/Sprite3D3:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 1.4, 2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector3(-0.51753, 1.82927, 0.438884), Vector3(-0.680992, 2.79562, 0.438884), Vector3(-1.16967, 1.93085, 0.438884)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Shop/hands/Sprite3D4:position")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0, 1.4, 2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector3(0.507132, 1.82927, 0.438884), Vector3(0.776177, 2.78664, 0.438884), Vector3(1.21586, 1.98618, 0.438884)]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("Shop/hands/Sprite3D/Sprite3D5:visible")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0, 2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("Shop/hands/Sprite3D3/Sprite3D5:visible")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0, 2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("Shop/hands/Sprite3D4/Sprite3D5:visible")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0, 2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("Shop/hands/Sprite3D2/Sprite3D5:visible")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0, 2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/10/type = "value"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("Shop/hands/Sprite3D/Node3D:visible")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"times": PackedFloat32Array(0, 2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+tracks/11/type = "value"
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/path = NodePath("Shop/hands/Sprite3D3/Node3D2:visible")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = {
+"times": PackedFloat32Array(0, 2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+tracks/12/type = "value"
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/path = NodePath("Shop/hands/Sprite3D4/Node3D3:visible")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/keys = {
+"times": PackedFloat32Array(0, 2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+tracks/13/type = "value"
+tracks/13/imported = false
+tracks/13/enabled = true
+tracks/13/path = NodePath("Shop/hands/Sprite3D2/Node3D2:visible")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/keys = {
+"times": PackedFloat32Array(0, 2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_e0uac"]
+_data = {
+"RESET": SubResource("Animation_t1oif"),
+"open": SubResource("Animation_jr7nb")
+}
+
+[node name="ShopROOM" type="Node3D"]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_cwo46")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(0.97437, -0.0964894, 0.203206, 0, 0.903335, 0.428935, -0.224951, -0.417942, 0.880183, 0, 2.72066, -12.3382)
+light_energy = 0.5
+
+[node name="DirectionalLight3D2" type="DirectionalLight3D" parent="."]
+transform = Transform3D(0.97437, 0.0964894, -0.203206, 0, 0.903335, 0.428935, 0.224951, -0.417942, 0.880183, 0, 2.72066, -12.3382)
+light_energy = 0.5
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.927589, 0.373603, 0, -0.373603, 0.927589, 0, 4.40851, 8.51106)
+
+[node name="CharacterBody3D" parent="." instance=ExtResource("3_2iro3")]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="."]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D"]
+mesh = SubResource("PlaneMesh_vriec")
+skeleton = NodePath("../..")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 3, -4)
+mesh = SubResource("PlaneMesh_hjmtv")
+skeleton = NodePath("../..")
+
+[node name="MeshInstance3D3" type="MeshInstance3D" parent="StaticBody3D"]
+transform = Transform3D(-4.37114e-08, 1, -4.37114e-08, 0, -4.37114e-08, -1, -1, -4.37114e-08, 1.91069e-15, -8, 3, -4)
+mesh = SubResource("PlaneMesh_hjmtv")
+skeleton = NodePath("../..")
+
+[node name="MeshInstance3D4" type="MeshInstance3D" parent="StaticBody3D"]
+transform = Transform3D(-4.37114e-08, -1, 4.37114e-08, 0, -4.37114e-08, -1, 1, -4.37114e-08, 1.91069e-15, 8, 3, -4)
+mesh = SubResource("PlaneMesh_hjmtv")
+skeleton = NodePath("../..")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
+shape = SubResource("WorldBoundaryShape3D_ylnud")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, -4)
+shape = SubResource("WorldBoundaryShape3D_ylnud")
+
+[node name="CollisionShape3D5" type="CollisionShape3D" parent="StaticBody3D"]
+transform = Transform3D(-1, -8.74228e-08, 3.82137e-15, 0, -4.37114e-08, -1, 8.74228e-08, -1, 4.37114e-08, 0, 0, 3.70394)
+shape = SubResource("WorldBoundaryShape3D_ylnud")
+
+[node name="CollisionShape3D3" type="CollisionShape3D" parent="StaticBody3D"]
+transform = Transform3D(-4.37114e-08, 1, -4.37114e-08, 0, -4.37114e-08, -1, -1, -4.37114e-08, 1.91069e-15, -8, 0, -4)
+shape = SubResource("WorldBoundaryShape3D_ylnud")
+
+[node name="CollisionShape3D4" type="CollisionShape3D" parent="StaticBody3D"]
+transform = Transform3D(-4.37114e-08, -1, 4.37114e-08, 0, -4.37114e-08, -1, 1, -4.37114e-08, 1.91069e-15, 8, 0, -4)
+shape = SubResource("WorldBoundaryShape3D_ylnud")
+
+[node name="Shop" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -4)
+
+[node name="Sprite3D" type="Sprite3D" parent="Shop"]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 0, 2.7055, 0.1)
+texture_filter = 0
+texture = ExtResource("4_u8ek8")
+hframes = 5
+
+[node name="Sprite3D2" type="Sprite3D" parent="Shop"]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 0, 2.706, 0.2)
+texture_filter = 0
+texture = ExtResource("4_u8ek8")
+hframes = 5
+frame = 1
+
+[node name="hands" type="Node3D" parent="Shop"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.16987, -2.39772)
+
+[node name="Sprite3D" type="Sprite3D" parent="Shop/hands"]
+transform = Transform3D(4, 0, 0, 0, 3.74735, 1.39906, 0, -1.39906, 3.74735, -0.19715, 1.79547, 0.438884)
+texture_filter = 0
+texture = ExtResource("4_u8ek8")
+hframes = 5
+frame = 3
+
+[node name="Sprite3D5" type="Sprite3D" parent="Shop/hands/Sprite3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.00224125, 0.00600302)
+texture_filter = 0
+texture = ExtResource("4_u8ek8")
+hframes = 5
+frame = 4
+
+[node name="Node3D" type="Node3D" parent="Shop/hands/Sprite3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0575028, -0.130869, 0.0235469)
+visible = false
+
+[node name="Sprite3D" type="Sprite3D" parent="Shop/hands/Sprite3D/Node3D"]
+transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 0, 0, 0)
+texture = ExtResource("5_jmiuo")
+
+[node name="Sprite3D3" type="Sprite3D" parent="Shop/hands"]
+transform = Transform3D(4, 0, 0, 0, 3.74735, 1.39906, 0, -1.39906, 3.74735, -0.51753, 1.82927, 0.438884)
+texture_filter = 0
+texture = ExtResource("4_u8ek8")
+hframes = 5
+frame = 2
+
+[node name="Sprite3D5" type="Sprite3D" parent="Shop/hands/Sprite3D3"]
+transform = Transform3D(0.967339, 0.237477, 0.0886614, -0.237477, 0.971334, -0.0107023, -0.0886614, -0.0107023, 0.996004, 0.0562474, -0.00038147, 0.00102198)
+texture_filter = 0
+texture = ExtResource("4_u8ek8")
+hframes = 5
+frame = 4
+
+[node name="Node3D2" type="Node3D" parent="Shop/hands/Sprite3D3"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0424473, -0.11558, 0.00848401)
+visible = false
+
+[node name="Sprite3D" type="Sprite3D" parent="Shop/hands/Sprite3D3/Node3D2"]
+transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 0, 0, 0)
+texture = ExtResource("5_jmiuo")
+
+[node name="Sprite3D4" type="Sprite3D" parent="Shop/hands"]
+transform = Transform3D(4, 0, 0, 0, 3.74735, 1.39906, 0, -1.39906, 3.74735, 0.507132, 1.82927, 0.438884)
+flip_h = true
+texture_filter = 0
+texture = ExtResource("4_u8ek8")
+hframes = 5
+frame = 2
+
+[node name="Sprite3D5" type="Sprite3D" parent="Shop/hands/Sprite3D4"]
+transform = Transform3D(0.972634, -0.217667, -0.0812654, 0.217667, 0.975982, -0.00896713, 0.0812654, -0.00896698, 0.996652, -0.0557331, -0.00364113, 0.00975263)
+flip_h = true
+texture_filter = 0
+texture = ExtResource("4_u8ek8")
+hframes = 5
+frame = 4
+
+[node name="Node3D3" type="Node3D" parent="Shop/hands/Sprite3D4"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0517759, -0.116981, 0.00796103)
+visible = false
+
+[node name="Sprite3D" type="Sprite3D" parent="Shop/hands/Sprite3D4/Node3D3"]
+transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 0, 0, 0)
+texture = ExtResource("5_jmiuo")
+
+[node name="Sprite3D2" type="Sprite3D" parent="Shop/hands"]
+transform = Transform3D(4, 0, 0, 0, 3.74735, 1.39906, 0, -1.39906, 3.74735, 0.257853, 1.79547, 0.438884)
+flip_h = true
+texture_filter = 0
+texture = ExtResource("4_u8ek8")
+hframes = 5
+frame = 3
+
+[node name="Sprite3D5" type="Sprite3D" parent="Shop/hands/Sprite3D2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.00655562, 0.0175589)
+flip_h = true
+texture_filter = 0
+texture = ExtResource("4_u8ek8")
+hframes = 5
+frame = 4
+
+[node name="Node3D2" type="Node3D" parent="Shop/hands/Sprite3D2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0674356, -0.132779, 0.0228338)
+visible = false
+
+[node name="Sprite3D" type="Sprite3D" parent="Shop/hands/Sprite3D2/Node3D2"]
+transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 0, 0, 0)
+texture = ExtResource("5_jmiuo")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Shop"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0782776, 1.07068, 0.406189)
+shape = SubResource("BoxShape3D_w2py1")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_e0uac")
+}
+autoplay = "open"
+
+[node name="Sprite3D" type="Sprite3D" parent="."]
+transform = Transform3D(-1.74846e-07, 0, -4, 0, 4, 0, 4, 0, -1.74846e-07, -7.96933, 1.27206, 0)
+texture_filter = 0
+texture = ExtResource("6_uihdt")
+hframes = 4
+frame = 1
+
+[node name="Sprite3D2" type="Sprite3D" parent="."]
+transform = Transform3D(-1.74846e-07, 0, -4, 0, 4, 0, 4, 0, -1.74846e-07, 7.99109, 1.27206, 0)
+texture_filter = 0
+texture = ExtResource("6_uihdt")
+hframes = 4
+frame = 1
