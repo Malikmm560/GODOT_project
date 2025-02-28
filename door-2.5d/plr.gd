@@ -1,9 +1,8 @@
 extends CharacterBody3D
 
-
 const SPEED = 5.0
 const JUMP_VELOCITY = 4.5
-
+@export var sensitivity: float = 0.2  # Adjust mouse sensitivity
 
 func _physics_process(delta):
 	# Add the gravity.
@@ -26,3 +25,9 @@ func _physics_process(delta):
 		velocity.z = move_toward(velocity.z, 0, SPEED)
 
 	move_and_slide()
+
+# MOUSE MOVEMENT (Left & Right only)
+func _unhandled_input(event):
+	if event is InputEventMouseMotion:
+		# Rotate only on the Y-axis (left and right movement)
+		rotate_y(-deg_to_rad(event.relative.x * sensitivity))
