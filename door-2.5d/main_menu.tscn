@@ -1,5 +1,4 @@
-
-[gd_scene load_steps=18 format=3 uid="uid://bgpot08jiwaqa"]
+[gd_scene load_steps=25 format=3 uid="uid://bgpot08jiwaqa"]
 
 [ext_resource type="Texture2D" uid="uid://cmbnuib8o5qh1" path="res://sprites/ffloor.png" id="1_6svt6"]
 [ext_resource type="Texture2D" uid="uid://c7pq57w1yxoxu" path="res://sprites/waall.png" id="2_8hfcm"]
@@ -63,6 +62,69 @@ size = Vector3(2.5, 1, 1)
 [sub_resource type="BoxShape3D" id="BoxShape3D_b33eo"]
 size = Vector3(1, 1.19141, 1.59192)
 
+[sub_resource type="Animation" id="Animation_eny0w"]
+resource_name = "open"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite3D3:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(-0.398816, 1.27691, -0.0507374), Vector3(-1.78551, 1.27691, -0.0507374)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sprite3D6:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(0.126372, 1.27691, -0.0507374), Vector3(1.57468, 1.27691, -0.0507374)]
+}
+
+[sub_resource type="Animation" id="Animation_8o6bh"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite3D3:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(-0.398816, 1.27691, -0.0507374)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sprite3D6:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0.126372, 1.27691, -0.0507374)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_rp3kt"]
+_data = {
+"RESET": SubResource("Animation_8o6bh"),
+"open": SubResource("Animation_eny0w")
+}
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_0c1mg"]
+size = Vector3(1.71399, 3.14584, 1)
+
 [node name="MMMAINmenu" type="Node3D"]
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
@@ -83,8 +145,8 @@ transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 
 target_position = Vector3(0, -10, 0)
 
 [node name="room" type="Node3D" parent="."]
-metadata/_edit_group_ = true
 metadata/_edit_lock_ = true
+metadata/_edit_group_ = true
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="room"]
 mesh = SubResource("PlaneMesh_6hsux")
@@ -131,7 +193,7 @@ mesh = SubResource("PlaneMesh_5xds1")
 skeleton = NodePath("../..")
 
 [node name="MeshInstance3D23" type="MeshInstance3D" parent="room"]
-transform = Transform3D(0.998923, -0.0464091, 2.02861e-09, 0, -4.37114e-08, -1, 0.0464091, 0.998922, -4.36643e-08, 0, 3, -2.99792)
+transform = Transform3D(0.998923, -0.0464091, 2.02861e-09, 0, -4.37114e-08, -1, 0.0464091, 0.998922, -4.36643e-08, 0, 2.6638, -2.99792)
 mesh = SubResource("PlaneMesh_cksiu")
 skeleton = NodePath("../..")
 
@@ -213,7 +275,7 @@ shape = SubResource("BoxShape3D_b33eo")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.02911, 1.99885, 0.0088501)
 shape = SubResource("BoxShape3D_b33eo")
 
-[node name="Playbutton" type="Node3D" parent="."]
+[node name="Playbutton" type="StaticBody3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.979561, 0, -3.26459)
 
 [node name="Sprite3D" type="Sprite3D" parent="Playbutton"]
@@ -223,13 +285,45 @@ texture = ExtResource("5_bo1te")
 hframes = 2
 vframes = 2
 
+[node name="Sprite3D3" type="Sprite3D" parent="Playbutton"]
+transform = Transform3D(1.7, 0, 0, 0, 1.7, 0, 0, 0, 1.7, -0.398816, 1.27691, -0.0507374)
+texture_filter = 0
+texture = ExtResource("5_bo1te")
+hframes = 2
+vframes = 2
+frame = 3
+
+[node name="Sprite3D6" type="Sprite3D" parent="Playbutton"]
+transform = Transform3D(1.7, 0, 0, 0, 1.7, 0, 0, 0, 1.7, 0.126372, 1.27691, -0.0507374)
+flip_h = true
+texture_filter = 0
+texture = ExtResource("5_bo1te")
+hframes = 2
+vframes = 2
+frame = 3
+
+[node name="Label3D" type="Label3D" parent="Playbutton/Sprite3D6"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0480154, -0.0869062, 0.0327142)
+modulate = Color(0, 0, 0, 1)
+text = "PLAY"
+font_size = 45
+outline_size = 32
+
 [node name="Sprite3D4" type="Sprite3D" parent="Playbutton"]
-transform = Transform3D(1.7, 0, 0, 0, 1.7, 0, 0, 0, 1.7, -0.123757, 1.27691, -1.61008)
+transform = Transform3D(1.69959, 0.0373324, 0.00192449, 0, -0.0875192, 1.69775, 0.0373819, -1.69734, -0.0874981, -0.123757, -0.15234, -0.596214)
 texture_filter = 0
 texture = ExtResource("5_bo1te")
 hframes = 2
 vframes = 2
 frame = 1
+
+[node name="Sprite3D5" type="Sprite3D" parent="Playbutton"]
+transform = Transform3D(1.69959, 0.0373324, 0.00192449, 0, -0.0875192, 1.69775, 0.0373819, -1.69734, -0.0874981, -0.14667, 2.63266, -0.596214)
+texture_filter = 0
+texture = ExtResource("5_bo1te")
+hframes = 2
+vframes = 2
+frame = 2
 
 [node name="Sprite3D2" type="Sprite3D" parent="Playbutton"]
 transform = Transform3D(0.131487, 0, 1.69491, 0, 1.7, 0, -1.69491, 0, 0.131487, -1.11508, 1.27691, -0.691684)
@@ -238,9 +332,11 @@ texture = ExtResource("5_bo1te")
 hframes = 2
 vframes = 2
 
-[node name="Sprite3D3" type="Sprite3D" parent="Playbutton"]
-transform = Transform3D(0.0606042, 0, 1.69892, 0, 1.7, 0, -1.69892, 0, 0.0606042, 0.741956, 1.27691, -0.691684)
-texture_filter = 0
-texture = ExtResource("5_bo1te")
-hframes = 2
-vframes = 2
+[node name="playani" type="AnimationPlayer" parent="Playbutton"]
+libraries = {
+"": SubResource("AnimationLibrary_rp3kt")
+}
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Playbutton"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0789185, 1.07292, 0)
+shape = SubResource("BoxShape3D_0c1mg")

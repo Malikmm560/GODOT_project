@@ -10,6 +10,7 @@ var wanaExit = false
 
 @onready var sp: Sprite3D = $"../exitbuttons/Sprite3D"
 @onready var sp2: Sprite3D = $"../exitbuttons/Sprite3D2"
+@onready var playani: AnimationPlayer = $"../Playbutton/playani"
 
 func _ready():
 	Input.mouse_mode = Input.MOUSE_MODE_CAPTURED  # Lock cursor to screen
@@ -35,6 +36,8 @@ func _process(_delta):
 			wanaExit = true
 			sp.frame = 1
 			sp2.frame = 1
+		elif collider.name == "Playbutton":
+			playani.play("open")
 	else:
 		wanaExit = false
 		sp.frame = 0
