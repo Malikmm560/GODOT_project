@@ -3,7 +3,7 @@
 [ext_resource type="Script" path="res://plr.gd" id="1_rlbvw"]
 [ext_resource type="Texture2D" uid="uid://d036830s8nvvm" path="res://sprites/plrcharadoor.png" id="2_dwhib"]
 [ext_resource type="Script" path="res://node.gd" id="3_w2aeo"]
-[ext_resource type="PackedScene" uid="uid://dmy0ww4x0eksh" path="res://inventory.tscn" id="4_ixcqc"]
+[ext_resource type="PackedScene" path="res://inventory.tscn" id="4_ixcqc"]
 
 [sub_resource type="Animation" id="Animation_kvfey"]
 resource_name = "alking"

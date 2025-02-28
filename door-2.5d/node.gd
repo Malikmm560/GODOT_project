@@ -26,6 +26,7 @@ func damage_or_hit() -> void:
 	#health it will remove 5 times if you dont like it change it NOT MORE THAN 50 😭😭
 	health -= 5
 	if health <= 0:
+		Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
 		$CanvasLayer/ColorRect.visible = true
 		$CanvasLayer/Label2.text = "DEAD"
 		$CanvasLayer/Label2.modulate = Color.RED
@@ -38,9 +39,4 @@ func damage_or_hit() -> void:
 func restart_game_local() -> void:
 	print("Restarting game...")
 	health = MAX_HEALTH
-	$CanvasLayer/Label2.text = ""
-	$CanvasLayer/Label2.modulate = Color.WHITE
-	$CanvasLayer/Button.visible = false
-	$CanvasLayer/ColorRect.visible = false
-	health_bar()
-	$"../..".position = Vector3(0, 0, 0)  # Change this to the starting position
+	get_tree().change_scene_to_file("res://main_menu.tscn")
