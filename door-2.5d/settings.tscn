@@ -1,0 +1,110 @@
+[gd_scene load_steps=6 format=3 uid="uid://bbngv2loen1qt"]
+
+[ext_resource type="Texture2D" uid="uid://8n71kg3ftr6h" path="res://icon.svg" id="1_vt85r"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_pix4e"]
+font_size = 64
+
+[sub_resource type="Animation" id="Animation_merwu"]
+resource_name = "fade"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ColorRect:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0, 0, 0, 1), Color(0, 0, 0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_vku8q"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ColorRect:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0, 0, 0, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_egqiy"]
+_data = {
+"RESET": SubResource("Animation_vku8q"),
+"fade": SubResource("Animation_merwu")
+}
+
+[node name="Settings" type="Node2D"]
+
+[node name="Icon" type="Sprite2D" parent="."]
+modulate = Color(0, 0, 0, 0.478431)
+position = Vector2(578.25, 325.5)
+scale = Vector2(7.15234, 4.19531)
+texture = ExtResource("1_vt85r")
+
+[node name="Label" type="Label" parent="."]
+offset_left = 439.0
+offset_top = 44.0
+offset_right = 687.0
+offset_bottom = 132.0
+text = "Settings
+"
+label_settings = SubResource("LabelSettings_pix4e")
+
+[node name="Label2" type="Label" parent="."]
+offset_left = 261.0
+offset_top = 117.0
+offset_right = 509.0
+offset_bottom = 205.0
+rotation = 0.366462
+text = "we have none go 
+                       yourself"
+label_settings = SubResource("LabelSettings_pix4e")
+
+[node name="Label4" type="Label" parent="."]
+modulate = Color(0, 0, 1, 1)
+offset_left = 761.0
+offset_top = 306.0
+offset_right = 1009.0
+offset_bottom = 394.0
+rotation = 0.366462
+text = "F%&@"
+label_settings = SubResource("LabelSettings_pix4e")
+
+[node name="Label5" type="Label" parent="."]
+modulate = Color(1, 0, 0, 1)
+offset_left = 747.0
+offset_top = 315.0
+offset_right = 995.0
+offset_bottom = 403.0
+rotation = 0.366462
+text = "F%&@"
+label_settings = SubResource("LabelSettings_pix4e")
+
+[node name="Label3" type="Label" parent="."]
+modulate = Color(0, 1, 0, 1)
+offset_left = 754.0
+offset_top = 310.0
+offset_right = 1002.0
+offset_bottom = 398.0
+rotation = 0.366462
+text = "F%&@"
+label_settings = SubResource("LabelSettings_pix4e")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_right = 1188.0
+offset_bottom = 674.0
+color = Color(0, 0, 0, 1)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_egqiy")
+}
+autoplay = "fade"

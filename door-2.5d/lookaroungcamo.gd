@@ -7,17 +7,31 @@ extends Camera3D
 var rotation_x: float = 0.0
 
 var wanaExit = false
+var wanaplay = false
+var wanaset = false
 
 @onready var sp: Sprite3D = $"../exitbuttons/Sprite3D"
 @onready var sp2: Sprite3D = $"../exitbuttons/Sprite3D2"
 @onready var playani: AnimationPlayer = $"../Playbutton/playani"
+@onready var playani2: AnimationPlayer = $"../settingsbutton/playani2"
 
 func _ready():
 	Input.mouse_mode = Input.MOUSE_MODE_CAPTURED  # Lock cursor to screen
 
 func _input(event):
-	if event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_LEFT and event.pressed and wanaExit:
-		get_tree().quit()
+	if event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_LEFT and event.pressed:
+		if wanaExit:
+			get_tree().quit()
+		elif wanaplay:
+			playani.play("open")
+			await playani.animation_finished
+			get_tree().change_scene_to_file("res://room.tscn")
+			Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
+		elif wanaset:
+			playani2.play("open")
+			await playani2.animation_finished
+			get_tree().change_scene_to_file("res://settings.tscn")
+			Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
 	
 	if event is InputEventMouseMotion:
 		# Rotate the camera horizontally
@@ -37,8 +51,12 @@ func _process(_delta):
 			sp.frame = 1
 			sp2.frame = 1
 		elif collider.name == "Playbutton":
-			playani.play("open")
+			wanaplay = true
+		elif collider.name == "settingsbutton":
+			wanaset = true
 	else:
+		wanaplay = false
 		wanaExit = false
+		wanaset = false
 		sp.frame = 0
 		sp2.frame = 0
