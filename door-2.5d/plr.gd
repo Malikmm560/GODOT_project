@@ -18,7 +18,7 @@ func _physics_process(delta):
 	if Input.is_action_just_pressed("ui_accept") and is_on_floor():
 		velocity.y = JUMP_VELOCITY
 
-	var input_dir = Input.get_vector("ui_left", "ui_right", "ui_up", "ui_down")
+	var input_dir = Input.get_vector("ui_left", "ui_right", "ui_down", "ui_up")
 	var camera_rotation = camera.rotation.y
 
 	var direction = Vector3.ZERO
