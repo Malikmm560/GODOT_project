@@ -2,7 +2,7 @@ extends CharacterBody3D
 
 const SPEED = 5.0
 const JUMP_VELOCITY = 4.5
-var sensitivity: float = 0.01
+var sensitivity: float = 0.004
 
 var rotation_y := 0.0
 
