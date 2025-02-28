@@ -1,7 +1,7 @@
 extends Node
 
-var i = 2
-var table = {"1":i}
+var arrey =[]
+var table = {}
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -10,4 +10,4 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	print(table["1"])
+	pass

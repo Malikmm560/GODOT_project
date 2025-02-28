@@ -1,19 +1,77 @@
-[gd_scene load_steps=6 format=3 uid="uid://fryr32qsh36q"]
+[gd_scene load_steps=10 format=3 uid="uid://fryr32qsh36q"]
 
 [ext_resource type="Script" path="res://plr.gd" id="1_rlbvw"]
-[ext_resource type="Texture2D" uid="uid://8n71kg3ftr6h" path="res://icon.svg" id="2_iiuqp"]
+[ext_resource type="Texture2D" uid="uid://d036830s8nvvm" path="res://sprites/plrcharadoor.png" id="2_dwhib"]
 [ext_resource type="Script" path="res://node.gd" id="3_w2aeo"]
 [ext_resource type="PackedScene" uid="uid://dmy0ww4x0eksh" path="res://inventory.tscn" id="4_ixcqc"]
 
-[sub_resource type="BoxShape3D" id="BoxShape3D_76q7x"]
-size = Vector3(1.08728, 1.09961, 0.15097)
+[sub_resource type="Animation" id="Animation_kvfey"]
+resource_name = "alking"
+length = 0.6
+loop_mode = 1
+step = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite3D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.233333, 0.433333),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [0, 1, 2]
+}
+
+[sub_resource type="Animation" id="Animation_adrxr"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite3D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+
+[sub_resource type="Animation" id="Animation_hau15"]
+resource_name = "idle"
+length = 0.4
+step = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite3D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_vppay"]
+_data = {
+"RESET": SubResource("Animation_adrxr"),
+"alking": SubResource("Animation_kvfey"),
+"idle": SubResource("Animation_hau15")
+}
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_7djul"]
 
 [node name="CharacterBody3D" type="CharacterBody3D"]
 script = ExtResource("1_rlbvw")
 
 [node name="Sprite3D" type="Sprite3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.435629, 0)
-texture = ExtResource("2_iiuqp")
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.983425, 0)
+texture = ExtResource("2_dwhib")
+hframes = 2
+vframes = 2
 
 [node name="healthbar" type="Node" parent="Sprite3D"]
 script = ExtResource("3_w2aeo")
@@ -62,12 +120,17 @@ text = "health"
 [node name="Node2D" parent="Sprite3D" instance=ExtResource("4_ixcqc")]
 position = Vector2(537, 605)
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.222839, 0.649497, 0.434799)
-shape = SubResource("BoxShape3D_76q7x")
-
 [node name="Camera3D" type="Camera3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 0.962871, 0.269962, 0, -0.269962, 0.962871, -0.0265791, 1.50668, 4.54581)
 
 [node name="flashlight" type="CSGCylinder3D" parent="."]
 transform = Transform3D(0.107789, 0, 0, 0, -1.833e-08, -0.117645, 0, 0.419342, -5.14245e-09, -0.810022, 0.389364, -0.371867)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_vppay")
+}
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(0.879694, 0, 0, 0, 1, 0, 0, 0, 0.13959, 0.0128534, 0.965373, 0.0235141)
+shape = SubResource("CapsuleShape3D_7djul")
