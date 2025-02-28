@@ -63,7 +63,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.222839, 0.649497, 0.434799)
 shape = SubResource("BoxShape3D_76q7x")
 
 [node name="Camera3D" type="Camera3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 0.962871, 0.269962, 0, -0.269962, 0.962871, 0, 1.31183, 2.82348)
+transform = Transform3D(0.778462, -0.169453, 0.604386, 0, 0.962871, 0.269962, -0.627691, -0.210155, 0.749559, 2.78111, 1.31183, 2.82348)
 
 [node name="flashlight" type="CSGCylinder3D" parent="."]
-transform = Transform3D(0.107789, 0, 0, 0, -1.833e-08, -0.117645, 0, 0.419342, -5.14245e-09, -0.810022, 0.389364, -0.371867)
+transform = Transform3D(0.107789, 0, 0, 0, -1.833e-08, -0.117645, 0, 0.419342, -5.14245e-09, -0.722395, 0.389364, 0.344504)
