@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://cosaxj7lmjsfe"]
+[gd_scene load_steps=18 format=3 uid="uid://cosaxj7lmjsfe"]
 
 [ext_resource type="Texture2D" uid="uid://cmbnuib8o5qh1" path="res://sprites/ffloor.png" id="1_4s5y0"]
 [ext_resource type="Texture2D" uid="uid://c7pq57w1yxoxu" path="res://sprites/waall.png" id="2_wskm5"]
@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://dy3euhp8vb6d7" path="res://sprites/shop.png" id="4_u8ek8"]
 [ext_resource type="Texture2D" uid="uid://8n71kg3ftr6h" path="res://icon.svg" id="5_jmiuo"]
 [ext_resource type="Texture2D" uid="uid://bm2swmekw0jav" path="res://sprites/doors.png" id="6_uihdt"]
+[ext_resource type="PackedScene" uid="uid://c1aabsbp2ooah" path="res://basicdrawer.tscn" id="7_l0clu"]
 
 [sub_resource type="Environment" id="Environment_cwo46"]
 background_mode = 2
@@ -575,3 +576,9 @@ texture_filter = 0
 texture = ExtResource("6_uihdt")
 hframes = 4
 frame = 1
+
+[node name="basicdrawer" parent="." instance=ExtResource("7_l0clu")]
+transform = Transform3D(0.6, 0, 0, 0, 0.6, 0, 0, 0, 0.6, 3.25895, 0.424721, -3.47129)
+
+[node name="basicdrawer2" parent="." instance=ExtResource("7_l0clu")]
+transform = Transform3D(-0.0132041, 0, 0.599855, 0, 0.6, 0, -0.599855, 0, -0.0132041, -7.54328, 0.367602, 2.52551)
