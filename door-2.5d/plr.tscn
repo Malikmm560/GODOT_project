@@ -3,7 +3,22 @@
 [ext_resource type="Script" path="res://plr.gd" id="1_rlbvw"]
 [ext_resource type="Texture2D" uid="uid://d036830s8nvvm" path="res://sprites/plrcharadoor.png" id="2_dwhib"]
 [ext_resource type="Script" path="res://node.gd" id="3_w2aeo"]
-[ext_resource type="PackedScene" path="res://inventory.tscn" id="4_ixcqc"]
+[ext_resource type="PackedScene" uid="uid://dmy0ww4x0eksh" path="res://inventory.tscn" id="4_ixcqc"]
+
+[sub_resource type="Animation" id="Animation_adrxr"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite3D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
 
 [sub_resource type="Animation" id="Animation_kvfey"]
 resource_name = "alking"
@@ -21,21 +36,6 @@ tracks/0/keys = {
 "transitions": PackedFloat32Array(1, 1, 1),
 "update": 1,
 "values": [0, 1, 2]
-}
-
-[sub_resource type="Animation" id="Animation_adrxr"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Sprite3D:frame")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [0]
 }
 
 [sub_resource type="Animation" id="Animation_hau15"]
@@ -122,9 +122,6 @@ position = Vector2(537, 605)
 
 [node name="Camera3D" type="Camera3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 0.962871, 0.269962, 0, -0.269962, 0.962871, -0.0265791, 1.50668, 4.54581)
-
-[node name="flashlight" type="CSGCylinder3D" parent="."]
-transform = Transform3D(0.107789, 0, 0, 0, -1.833e-08, -0.117645, 0, 0.419342, -5.14245e-09, -0.810022, 0.389364, -0.371867)
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
