@@ -1,6 +1,6 @@
 extends Marker3D
 
-var furniture = ["res://$cene/basicdrawer.tscn","res://$cene/largemultydrawer.tscn","res://$cene/longbasicdrawer.tscn","res://$cene/multydrawer.tscn",null]
+var furniture = ["res://$cene/basicdrawer.tscn",null,"res://$cene/largemultydrawer.tscn","res://$cene/longbasicdrawer.tscn","res://$cene/multydrawer.tscn",null]
 
 func _ready() -> void:
 	var rand = furniture[randi()%furniture.size()] #chooooooooses a random drawer/furniture
