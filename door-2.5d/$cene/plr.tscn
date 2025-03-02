@@ -1,10 +1,14 @@
-[gd_scene load_steps=11 format=3 uid="uid://fryr32qsh36q"]
+[gd_scene load_steps=12 format=3 uid="uid://fryr32qsh36q"]
 
 [ext_resource type="Script" path="res://$cript/plr.gd" id="1_rlbvw"]
 [ext_resource type="Texture2D" uid="uid://d036830s8nvvm" path="res://sprites/plrcharadoor.png" id="2_dwhib"]
 [ext_resource type="Script" path="res://$cript/node.gd" id="3_w2aeo"]
 [ext_resource type="PackedScene" uid="uid://dmy0ww4x0eksh" path="res://$cene/inventory.tscn" id="4_ixcqc"]
 [ext_resource type="PackedScene" uid="uid://q3so2nthj0ey" path="res://$cene/flashlight.tscn" id="5_fj1cq"]
+[ext_resource type="Script" path="res://node.gd" id="3_w2aeo"]
+[ext_resource type="PackedScene" uid="uid://dmy0ww4x0eksh" path="res://inventory.tscn" id="4_ixcqc"]
+[ext_resource type="PackedScene" uid="uid://f1tsjrm0wca2" path="res://flashlight.tscn" id="5_fj1cq"]
+[ext_resource type="PackedScene" uid="uid://dhi2ul0yhka0l" path="res://cursor.tscn" id="6_w2dob"]
 
 [sub_resource type="Animation" id="Animation_adrxr"]
 length = 0.001
@@ -135,3 +139,5 @@ libraries = {
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 transform = Transform3D(0.879694, 0, 0, 0, 1, 0, 0, 0, 0.13959, 0.0128534, 0.965373, 0.0235141)
 shape = SubResource("CapsuleShape3D_7djul")
+
+[node name="Cursor" parent="." instance=ExtResource("6_w2dob")]

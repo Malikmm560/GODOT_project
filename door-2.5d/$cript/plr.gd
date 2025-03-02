@@ -5,15 +5,20 @@ extends CharacterBody3D
 const SPEED = 5.0
 const JUMP_VELOCITY = 4.5
 
-@onready var flashlight: SpotLight3D = $SpotLight3D
+@onready var flashlight: SpotLight3D = null
 var flash_rotat_smooth := 15.0
 var flash_posistion_smooth := 15.0
 @onready var camera = $Camera3D
 
-func _ready():
-	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
+#var flashlight: Node3D = null
 
+func _ready():
+	#Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
+	#flashlight = get_node("/root/room/Flashlight")
+	#flashlight = get_node("/root/room/flashlight")
+	pass
 func _physics_process(delta):
+	
 	if not is_on_floor():
 		velocity += get_gravity() * delta
 
@@ -42,3 +47,18 @@ func _physics_process(delta):
 		ani.play("idle")
 	
 	move_and_slide()
+
+	# Flashlight position logic (added here)
+	if direction:
+		var target_offset = Vector3.ZERO
+		if direction.x < -0.1:
+			target_offset = Vector3(-0.3, 0, 0) # Move flashlight to the left
+		elif direction.x > 0.1:
+			target_offset = Vector3(0.3, 0, 0) # Move flashlight to the right
+		
+		# Smoothly move flashlight towards the target offset
+		#flashlight.position.x = lerp(flashlight.position.x, target_offset.x, delta * flash_posistion_smooth)
+	else:
+		# Go back to center when not moving
+		#flashlight.position.x = lerp(flashlight.position.x, 0, delta * flash_posistion_smooth)
+		pass
