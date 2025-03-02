@@ -121,9 +121,6 @@ text = "health"
 [node name="Node2D" parent="Sprite3D" instance=ExtResource("4_ixcqc")]
 position = Vector2(537, 605)
 
-[node name="flashlight" parent="Sprite3D" instance=ExtResource("5_fj1cq")]
-transform = Transform3D(1.84643, 0, 0, 0, 1.77387, 0, 0, 0, 1.00192, 0.326953, -0.246502, 0.122023)
-
 [node name="Camera3D" type="Camera3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 0.962871, 0.269962, 0, -0.269962, 0.962871, -0.0265791, 1.50668, 4.54581)
 
@@ -135,3 +132,6 @@ libraries = {
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 transform = Transform3D(0.879694, 0, 0, 0, 1, 0, 0, 0, 0.13959, 0.0128534, 0.965373, 0.0235141)
 shape = SubResource("CapsuleShape3D_7djul")
+
+[node name="flashlight" parent="." instance=ExtResource("5_fj1cq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.380435, 0.736923, -0.0991198)

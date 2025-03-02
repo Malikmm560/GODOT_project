@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=3 uid="uid://cosaxj7lmjsfe"]
+[gd_scene load_steps=17 format=3 uid="uid://cosaxj7lmjsfe"]
 
 [ext_resource type="Texture2D" uid="uid://cmbnuib8o5qh1" path="res://sprites/ffloor.png" id="1_4s5y0"]
 [ext_resource type="Texture2D" uid="uid://c7pq57w1yxoxu" path="res://sprites/waall.png" id="2_wskm5"]
@@ -6,9 +6,6 @@
 [ext_resource type="Texture2D" uid="uid://dy3euhp8vb6d7" path="res://sprites/shop.png" id="4_u8ek8"]
 [ext_resource type="Texture2D" uid="uid://8n71kg3ftr6h" path="res://icon.svg" id="5_jmiuo"]
 [ext_resource type="Texture2D" uid="uid://bm2swmekw0jav" path="res://sprites/doors.png" id="6_uihdt"]
-[ext_resource type="PackedScene" uid="uid://c1aabsbp2ooah" path="res://basicdrawer.tscn" id="7_l0clu"]
-[ext_resource type="PackedScene" uid="uid://dwqea857hmvjf" path="res://longbasicdrawer.tscn" id="8_sxbhd"]
-[ext_resource type="PackedScene" uid="uid://ckw66kgyllsj8" path="res://multydrawer.tscn" id="9_ijsqk"]
 
 [sub_resource type="Environment" id="Environment_cwo46"]
 background_mode = 2
@@ -402,7 +399,7 @@ light_energy = 0.5
 [node name="Camera3D" type="Camera3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 0.927589, 0.373603, 0, -0.373603, 0.927589, 0, 4.40851, 8.51106)
 
-[node name="CharacterBody3D" parent="." groups=["plr"] instance=ExtResource("3_2iro3")]
+[node name="CharacterBody3D" parent="." instance=ExtResource("3_2iro3")]
 
 [node name="StaticBody3D" type="StaticBody3D" parent="."]
 
@@ -578,18 +575,3 @@ texture_filter = 0
 texture = ExtResource("6_uihdt")
 hframes = 4
 frame = 1
-
-[node name="basicdrawer" parent="." instance=ExtResource("7_l0clu")]
-transform = Transform3D(0.6, 0, 0, 0, 0.6, 0, 0, 0, 0.6, 3.25895, 0.424721, -3.47129)
-
-[node name="basicdrawer2" parent="." instance=ExtResource("7_l0clu")]
-transform = Transform3D(-0.0132041, 0, 0.599855, 0, 0.6, 0, -0.599855, 0, -0.0132041, -7.54328, 0.367602, 2.52551)
-
-[node name="Longbasicdrawer" parent="." instance=ExtResource("8_sxbhd")]
-transform = Transform3D(0.6, 0, 0, 0, 0.6, 0, 0, 0, 0.6, -3.04178, 0.391357, -3.55162)
-
-[node name="Longbasicdrawer2" parent="." instance=ExtResource("8_sxbhd")]
-transform = Transform3D(0.6, 0, 0, 0, 0.6, 0, 0, 0, 0.6, -6.0239, 0.391357, -3.55162)
-
-[node name="multydrawer" parent="." instance=ExtResource("9_ijsqk")]
-transform = Transform3D(0.7, 0, 0, 0, 0.7, 0, 0, 0, 0.7, 5.64443, 0.424955, -3.36086)

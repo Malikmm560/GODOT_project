@@ -5,7 +5,9 @@ extends CharacterBody3D
 const SPEED = 5.0
 const JUMP_VELOCITY = 4.5
 
-
+@onready var flashlight: SpotLight3D = $SpotLight3D
+var flash_rotat_smooth := 15.0
+var flash_posistion_smooth := 15.0
 @onready var camera = $Camera3D
 
 func _ready():
