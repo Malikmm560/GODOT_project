@@ -1,16 +1,16 @@
 [gd_scene load_steps=25 format=3 uid="uid://ced0i1hyr25ta"]
 
-[ext_resource type="Texture2D" uid="uid://cmbnuib8o5qh1" path="res://sprites/ffloor.png" id="1_6svt6"]
-[ext_resource type="Texture2D" uid="uid://c7pq57w1yxoxu" path="res://sprites/waall.png" id="2_8hfcm"]
-[ext_resource type="Script" path="res://$cript/lookaroungcamo.gd" id="3_r77r3"]
-[ext_resource type="Texture2D" uid="uid://b3nerkykyuau0" path="res://sprites/exitbutton.png" id="4_mwjbb"]
-[ext_resource type="Texture2D" uid="uid://cwotsu42ymp01" path="res://sprites/elevator.png" id="5_bo1te"]
+[ext_resource type="Script" path="res://$cript/lookaroungcamo.gd" id="1_ycwbk"]
+[ext_resource type="Texture2D" uid="uid://cmbnuib8o5qh1" path="res://sprites/ffloor.png" id="2_fewvm"]
+[ext_resource type="Texture2D" uid="uid://c7pq57w1yxoxu" path="res://sprites/waall.png" id="3_g22vc"]
+[ext_resource type="Texture2D" uid="uid://b3nerkykyuau0" path="res://sprites/exitbutton.png" id="4_7fc65"]
+[ext_resource type="Texture2D" uid="uid://cwotsu42ymp01" path="res://sprites/elevator.png" id="5_8nyp0"]
 
 [sub_resource type="Environment" id="Environment_ixmgn"]
 background_mode = 2
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_3u77s"]
-albedo_texture = ExtResource("1_6svt6")
+albedo_texture = ExtResource("2_fewvm")
 uv1_scale = Vector3(3, 2, 1)
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_6hsux"]
@@ -18,7 +18,7 @@ material = SubResource("StandardMaterial3D_3u77s")
 size = Vector2(8, 6)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_bf1nq"]
-albedo_texture = ExtResource("2_8hfcm")
+albedo_texture = ExtResource("3_g22vc")
 uv1_scale = Vector3(3, 2, 1)
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_pvfbi"]
@@ -26,7 +26,7 @@ material = SubResource("StandardMaterial3D_bf1nq")
 size = Vector2(8, 6)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_hf6y6"]
-albedo_texture = ExtResource("2_8hfcm")
+albedo_texture = ExtResource("3_g22vc")
 uv1_scale = Vector3(0.6, 2, 1)
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_5xol0"]
@@ -34,7 +34,7 @@ material = SubResource("StandardMaterial3D_hf6y6")
 size = Vector2(2, 6)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_e5d23"]
-albedo_texture = ExtResource("2_8hfcm")
+albedo_texture = ExtResource("3_g22vc")
 uv1_scale = Vector3(0.03, 2, 1)
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_5xds1"]
@@ -42,7 +42,7 @@ material = SubResource("StandardMaterial3D_e5d23")
 size = Vector2(0.1, 6)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_rct0m"]
-albedo_texture = ExtResource("2_8hfcm")
+albedo_texture = ExtResource("3_g22vc")
 uv1_scale = Vector3(0.15, 2, 1)
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_cksiu"]
@@ -163,7 +163,7 @@ spot_angle = 82.23
 
 [node name="Camera3D" type="Camera3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.55061, 0)
-script = ExtResource("3_r77r3")
+script = ExtResource("1_ycwbk")
 
 [node name="RayCast3D" type="RayCast3D" parent="Camera3D"]
 transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0)
@@ -290,13 +290,13 @@ mesh = SubResource("BoxMesh_l4h2i")
 [node name="Sprite3D" type="Sprite3D" parent="exitbuttons"]
 transform = Transform3D(0.0387715, 0, 0.999248, 0, 1, 0, -0.999248, 0, 0.0387715, -3.88277, 1.87082, 0)
 texture_filter = 0
-texture = ExtResource("4_mwjbb")
+texture = ExtResource("4_7fc65")
 vframes = 2
 
 [node name="Sprite3D2" type="Sprite3D" parent="exitbuttons"]
 transform = Transform3D(0.0288288, 0, -0.999584, 0, 1, 0, 0.999584, 0, 0.0288288, 3.95649, 1.87082, 0)
 texture_filter = 0
-texture = ExtResource("4_mwjbb")
+texture = ExtResource("4_7fc65")
 vframes = 2
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="exitbuttons"]
@@ -313,14 +313,14 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.979561, 0, -3.26459)
 [node name="Sprite3D" type="Sprite3D" parent="Playbutton"]
 transform = Transform3D(1.7, 0, 0, 0, 1.7, 0, 0, 0, 1.7, -0.123757, 1.27691, -1.61008)
 texture_filter = 0
-texture = ExtResource("5_bo1te")
+texture = ExtResource("5_8nyp0")
 hframes = 2
 vframes = 2
 
 [node name="Sprite3D3" type="Sprite3D" parent="Playbutton"]
 transform = Transform3D(1.7, 0, 0, 0, 1.7, 0, 0, 0, 1.7, -0.398816, 1.27691, -0.0507374)
 texture_filter = 0
-texture = ExtResource("5_bo1te")
+texture = ExtResource("5_8nyp0")
 hframes = 2
 vframes = 2
 frame = 3
@@ -329,7 +329,7 @@ frame = 3
 transform = Transform3D(1.69708, 0, 0.0996361, 0, 1.7, 0, -0.0996361, 0, 1.69708, 0.126372, 1.27691, -0.0507374)
 flip_h = true
 texture_filter = 0
-texture = ExtResource("5_bo1te")
+texture = ExtResource("5_8nyp0")
 hframes = 2
 vframes = 2
 frame = 3
@@ -344,7 +344,7 @@ outline_size = 32
 [node name="Sprite3D4" type="Sprite3D" parent="Playbutton"]
 transform = Transform3D(1.69959, 0.0373324, 0.00192449, 0, -0.0875192, 1.69775, 0.0373819, -1.69734, -0.0874981, -0.123757, -0.15234, -0.596214)
 texture_filter = 0
-texture = ExtResource("5_bo1te")
+texture = ExtResource("5_8nyp0")
 hframes = 2
 vframes = 2
 frame = 1
@@ -352,7 +352,7 @@ frame = 1
 [node name="Sprite3D5" type="Sprite3D" parent="Playbutton"]
 transform = Transform3D(1.69959, 0.0373324, 0.00192449, 0, -0.0875192, 1.69775, 0.0373819, -1.69734, -0.0874981, -0.14667, 2.63266, -0.596214)
 texture_filter = 0
-texture = ExtResource("5_bo1te")
+texture = ExtResource("5_8nyp0")
 hframes = 2
 vframes = 2
 frame = 2
@@ -360,7 +360,7 @@ frame = 2
 [node name="Sprite3D2" type="Sprite3D" parent="Playbutton"]
 transform = Transform3D(0.131487, 0, 1.69491, 0, 1.7, 0, -1.69491, 0, 0.131487, -1.11508, 1.27691, -0.691684)
 texture_filter = 0
-texture = ExtResource("5_bo1te")
+texture = ExtResource("5_8nyp0")
 hframes = 2
 vframes = 2
 
@@ -379,14 +379,14 @@ transform = Transform3D(-1, 0, 0, 0, 1, 0, 0, 0, 1, 0.972111, 0, -3.26459)
 [node name="Sprite3D" type="Sprite3D" parent="settingsbutton"]
 transform = Transform3D(1.7, 0, 0, 0, 1.7, 0, 0, 0, 1.7, -0.123757, 1.27691, -1.61008)
 texture_filter = 0
-texture = ExtResource("5_bo1te")
+texture = ExtResource("5_8nyp0")
 hframes = 2
 vframes = 2
 
 [node name="Sprite3D3" type="Sprite3D" parent="settingsbutton"]
 transform = Transform3D(1.7, 0, 0, 0, 1.7, 0, 0, 0, 1.7, -0.398816, 1.27691, -0.0507374)
 texture_filter = 0
-texture = ExtResource("5_bo1te")
+texture = ExtResource("5_8nyp0")
 hframes = 2
 vframes = 2
 frame = 3
@@ -395,7 +395,7 @@ frame = 3
 transform = Transform3D(1.69417, 0, 0.140715, 0, 1.7, 0, -0.140715, 0, 1.69417, 0.126372, 1.27691, -0.0507374)
 flip_h = true
 texture_filter = 0
-texture = ExtResource("5_bo1te")
+texture = ExtResource("5_8nyp0")
 hframes = 2
 vframes = 2
 frame = 3
@@ -409,7 +409,7 @@ outline_size = 32
 [node name="Sprite3D4" type="Sprite3D" parent="settingsbutton"]
 transform = Transform3D(1.69959, 0.0373324, 0.00192449, 0, -0.0875192, 1.69775, 0.0373819, -1.69734, -0.0874981, -0.123757, -0.15234, -0.596214)
 texture_filter = 0
-texture = ExtResource("5_bo1te")
+texture = ExtResource("5_8nyp0")
 hframes = 2
 vframes = 2
 frame = 1
@@ -417,7 +417,7 @@ frame = 1
 [node name="Sprite3D5" type="Sprite3D" parent="settingsbutton"]
 transform = Transform3D(1.69959, 0.0373324, 0.00192449, 0, -0.0875192, 1.69775, 0.0373819, -1.69734, -0.0874981, -0.14667, 2.63266, -0.596214)
 texture_filter = 0
-texture = ExtResource("5_bo1te")
+texture = ExtResource("5_8nyp0")
 hframes = 2
 vframes = 2
 frame = 2
@@ -425,7 +425,7 @@ frame = 2
 [node name="Sprite3D2" type="Sprite3D" parent="settingsbutton"]
 transform = Transform3D(0.131487, 0, 1.69491, 0, 1.7, 0, -1.69491, 0, 0.131487, -1.11508, 1.27691, -0.691684)
 texture_filter = 0
-texture = ExtResource("5_bo1te")
+texture = ExtResource("5_8nyp0")
 hframes = 2
 vframes = 2
 

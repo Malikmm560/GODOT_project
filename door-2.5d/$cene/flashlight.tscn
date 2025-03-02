@@ -1,13 +1,13 @@
 [gd_scene load_steps=3 format=3 uid="uid://q3so2nthj0ey"]
 
-[ext_resource type="Texture2D" uid="uid://fawl5cw606qq" path="res://sprites/extraitems.png" id="1_7mtal"]
-[ext_resource type="Script" path="res://$cript/flashlight.gd" id="1_igt6v"]
+[ext_resource type="Script" path="res://$cript/flashlight.gd" id="1_65w8j"]
+[ext_resource type="Texture2D" uid="uid://fawl5cw606qq" path="res://sprites/extraitems.png" id="2_1o8si"]
 
 [node name="flashlight" type="Node3D"]
-script = ExtResource("1_igt6v")
+script = ExtResource("1_65w8j")
 
 [node name="Sprite3D" type="Sprite3D" parent="."]
-texture = ExtResource("1_7mtal")
+texture = ExtResource("2_1o8si")
 hframes = 8
 frame = 4
 

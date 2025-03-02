@@ -1,11 +1,11 @@
 [gd_scene load_steps=6 format=3 uid="uid://b0ggblk2s25er"]
 
-[ext_resource type="Texture2D" uid="uid://cmbnuib8o5qh1" path="res://sprites/ffloor.png" id="1_o0eyc"]
-[ext_resource type="PackedScene" uid="uid://fryr32qsh36q" path="res://$cene/plr.tscn" id="2_unc2k"]
+[ext_resource type="PackedScene" uid="uid://fryr32qsh36q" path="res://$cene/plr.tscn" id="1_28cc2"]
+[ext_resource type="Texture2D" uid="uid://cmbnuib8o5qh1" path="res://sprites/ffloor.png" id="2_gere8"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_a5j3p"]
 albedo_color = Color(0.882353, 0.627451, 0.882353, 1)
-albedo_texture = ExtResource("1_o0eyc")
+albedo_texture = ExtResource("2_gere8")
 uv1_scale = Vector3(0.1, 0.1, 0.1)
 uv1_triplanar = true
 
@@ -18,7 +18,7 @@ size = Vector3(29.4088, 0.553223, 29.5073)
 
 [node name="room" type="Node3D"]
 
-[node name="CharacterBody3D" parent="." instance=ExtResource("2_unc2k")]
+[node name="CharacterBody3D" parent="." instance=ExtResource("1_28cc2")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.210295, 0.563345, 0.479834)
 
 [node name="wall" type="MeshInstance3D" parent="."]
