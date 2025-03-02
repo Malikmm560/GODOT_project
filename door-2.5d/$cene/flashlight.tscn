@@ -7,11 +7,18 @@
 script = ExtResource("1_65w8j")
 
 [node name="Sprite3D" type="Sprite3D" parent="."]
-texture = ExtResource("2_1o8si")
+transform = Transform3D(0.999996, 0.00278114, -0.000376904, -0.00278119, 0.999996, -0.000138032, 0.00037652, 0.000139076, 1, 0, 0, 0)
+texture_filter = 0
+texture = ExtResource("1_7mtal")
 hframes = 8
 frame = 4
 
-[node name="SpotLight3D" type="SpotLight3D" parent="Sprite3D"]
-transform = Transform3D(-0.00541045, 0, -0.999985, 0, 1, 0, 0.999985, 0, -0.00541045, 0, 0, 0)
-light_color = Color(0.966387, 0.965922, 7.70092e-07, 1)
-light_energy = 6.819
+[node name="SpotLight3D" type="SpotLight3D" parent="."]
+transform = Transform3D(0.999903, 0, -0.0139272, 0, 1, 0, 0.0139272, 0, 0.999903, -0.0147151, 0, 0)
+light_color = Color(0.991112, 1, 0.814807, 1)
+light_energy = 8.597
+light_indirect_energy = 1.484
+light_volumetric_fog_energy = 1.808
+light_size = 0.131
+light_specular = 1.955
+distance_fade_enabled = true
