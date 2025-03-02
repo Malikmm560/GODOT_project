@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://cosaxj7lmjsfe"]
+[gd_scene load_steps=18 format=3 uid="uid://cosaxj7lmjsfe"]
 
 [ext_resource type="PackedScene" uid="uid://fryr32qsh36q" path="res://$cene/plr.tscn" id="1_5tma3"]
 [ext_resource type="Texture2D" uid="uid://cmbnuib8o5qh1" path="res://sprites/ffloor.png" id="2_uyjne"]
@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://dy3euhp8vb6d7" path="res://sprites/shop.png" id="4_xtslu"]
 [ext_resource type="Texture2D" uid="uid://8n71kg3ftr6h" path="res://sprites/icon.svg" id="5_2x5ev"]
 [ext_resource type="Texture2D" uid="uid://bm2swmekw0jav" path="res://sprites/doors.png" id="6_c47p2"]
+[ext_resource type="PackedScene" uid="uid://jj7ityrhe4v6" path="res://$cene/furniturechoicer.tscn" id="7_gu3ll"]
 
 [sub_resource type="Environment" id="Environment_cwo46"]
 background_mode = 2
@@ -399,7 +400,7 @@ light_energy = 0.5
 [node name="Camera3D" type="Camera3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 0.927589, 0.373603, 0, -0.373603, 0.927589, 0, 4.40851, 8.51106)
 
-[node name="CharacterBody3D" parent="." instance=ExtResource("1_5tma3")]
+[node name="CharacterBody3D" parent="." groups=["plr"] instance=ExtResource("1_5tma3")]
 
 [node name="StaticBody3D" type="StaticBody3D" parent="."]
 
@@ -564,6 +565,7 @@ autoplay = "open"
 
 [node name="Sprite3D" type="Sprite3D" parent="."]
 transform = Transform3D(-1.74846e-07, 0, -4, 0, 4, 0, 4, 0, -1.74846e-07, -7.96933, 1.27206, 0)
+alpha_cut = 1
 texture_filter = 0
 texture = ExtResource("6_c47p2")
 hframes = 4
@@ -571,7 +573,26 @@ frame = 1
 
 [node name="Sprite3D2" type="Sprite3D" parent="."]
 transform = Transform3D(-1.74846e-07, 0, -4, 0, 4, 0, 4, 0, -1.74846e-07, 7.99109, 1.27206, 0)
+alpha_cut = 1
 texture_filter = 0
 texture = ExtResource("6_c47p2")
 hframes = 4
 frame = 1
+
+[node name="furniturechoicer" parent="." instance=ExtResource("7_gu3ll")]
+transform = Transform3D(0.7, 0, 0, 0, 0.7, 0, 0, 0, 0.7, -3.53483, 0.486711, -3.15618)
+
+[node name="furniturechoicer5" parent="." instance=ExtResource("7_gu3ll")]
+transform = Transform3D(-3.0598e-08, 0, 0.7, 0, 0.7, 0, -0.7, 0, -3.0598e-08, -7.37187, 0.486711, 2.91295)
+
+[node name="furniturechoicer6" parent="." instance=ExtResource("7_gu3ll")]
+transform = Transform3D(-3.0598e-08, 0, -0.7, 0, 0.7, 0, 0.7, 0, -3.0598e-08, 7.13623, 0.486711, 2.91295)
+
+[node name="furniturechoicer2" parent="." instance=ExtResource("7_gu3ll")]
+transform = Transform3D(0.7, 0, 0, 0, 0.7, 0, 0, 0, 0.7, -6.22592, 0.486711, -3.15618)
+
+[node name="furniturechoicer3" parent="." instance=ExtResource("7_gu3ll")]
+transform = Transform3D(0.7, 0, 0, 0, 0.7, 0, 0, 0, 0.7, 3.25627, 0.486711, -3.15618)
+
+[node name="furniturechoicer4" parent="." instance=ExtResource("7_gu3ll")]
+transform = Transform3D(0.7, 0, 0, 0, 0.7, 0, 0, 0, 0.7, 6.23249, 0.486711, -3.15618)

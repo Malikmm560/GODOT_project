@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://jj7ityrhe4v6"]
+
+[ext_resource type="Script" path="res://choosesfurniture.gd" id="1_2f2iv"]
+
+[node name="furniturechoicer" type="Marker3D"]
+gizmo_extents = 0.5
+script = ExtResource("1_2f2iv")

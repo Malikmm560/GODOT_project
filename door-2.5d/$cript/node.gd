@@ -39,4 +39,4 @@ func damage_or_hit() -> void:
 func restart_game_local() -> void:
 	print("Restarting game...")
 	health = MAX_HEALTH
-	get_tree().change_scene_to_file("res://main_menu.tscn")
+	get_tree().change_scene_to_file("res://$cene/main_menu.tscn")

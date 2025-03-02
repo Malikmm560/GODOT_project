@@ -27,13 +27,13 @@ func _process(_delta: float) -> void:
 		if allopen:
 			if open3:
 				ani.play_backwards("open3")
-				open1= false
+				open3= false
 			elif open2:
 				ani.play_backwards("open2")
 				open2= false
 			elif open1:
 				ani.play_backwards("open1")
-				open3= false
+				open1= false
 			else:
 				allopen = false
 
