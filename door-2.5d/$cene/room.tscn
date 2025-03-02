@@ -1,7 +1,8 @@
-[gd_scene load_steps=6 format=3 uid="uid://b0ggblk2s25er"]
+[gd_scene load_steps=7 format=3 uid="uid://b0ggblk2s25er"]
 
 [ext_resource type="PackedScene" uid="uid://fryr32qsh36q" path="res://$cene/plr.tscn" id="1_28cc2"]
 [ext_resource type="Texture2D" uid="uid://cmbnuib8o5qh1" path="res://sprites/ffloor.png" id="2_gere8"]
+[ext_resource type="PackedScene" uid="uid://6wiwhr4atgxc" path="res://$cene/item$.tscn" id="3_6e0o6"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_a5j3p"]
 albedo_color = Color(0.882353, 0.627451, 0.882353, 1)
@@ -34,3 +35,6 @@ skeleton = NodePath("../..")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.3598, -0.223389, -6.51051)
 shape = SubResource("BoxShape3D_a6ste")
+
+[node name="Area3D" parent="." instance=ExtResource("3_6e0o6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.661245, 1.51145, -5.44149)

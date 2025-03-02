@@ -25,12 +25,12 @@ func _input(event):
 		elif wanaplay:
 			playani.play("open")
 			await playani.animation_finished
-			get_tree().change_scene_to_file("res://room.tscn")
+			get_tree().change_scene_to_file("res://$cene/room.tscn")
 			Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
 		elif wanaset:
 			playani2.play("open")
 			await playani2.animation_finished
-			get_tree().change_scene_to_file("res://settings.tscn")
+			get_tree().change_scene_to_file("res://$cene/settings.tscn")
 			Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
 	
 	if event is InputEventMouseMotion:
