@@ -1,7 +1,7 @@
-[gd_scene load_steps=10 format=3 uid="uid://ckw66kgyllsj8"]
+[gd_scene load_steps=10 format=3 uid="uid://c1aabsbp2ooah"]
 
-[ext_resource type="Script" path="res://multyopendrawers.gd" id="1_nws41"]
-[ext_resource type="Texture2D" uid="uid://b2br0ekm2gtu7" path="res://sprites/drawers.png" id="2_phlnw"]
+[ext_resource type="Texture2D" uid="uid://b2br0ekm2gtu7" path="res://sprites/drawers.png" id="1_dqgen"]
+[ext_resource type="Script" path="res://$cript/opendrawer.gd" id="1_qlk3a"]
 
 [sub_resource type="Animation" id="Animation_7e2qh"]
 resource_name = "open1"
@@ -95,14 +95,14 @@ _data = {
 "open3": SubResource("Animation_c7rww")
 }
 
-[sub_resource type="BoxShape3D" id="BoxShape3D_3auuu"]
-size = Vector3(1.20104, 1.38623, 1.3219)
+[sub_resource type="BoxShape3D" id="BoxShape3D_3o7i0"]
+size = Vector3(1.26702, 1.38623, 1.3219)
 
-[sub_resource type="BoxShape3D" id="BoxShape3D_4mamg"]
-size = Vector3(1.00475, 1.38623, 1.0589)
+[sub_resource type="BoxShape3D" id="BoxShape3D_tbk8r"]
+size = Vector3(1.36467, 1.38623, 1.3219)
 
-[node name="multydrawer" type="StaticBody3D"]
-script = ExtResource("1_nws41")
+[node name="basicdrawer" type="StaticBody3D"]
+script = ExtResource("1_qlk3a")
 
 [node name="frame" type="Node3D" parent="."]
 
@@ -111,7 +111,7 @@ transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0.7178
 sorting_use_aabb_center = false
 alpha_cut = 1
 texture_filter = 0
-texture = ExtResource("2_phlnw")
+texture = ExtResource("1_dqgen")
 hframes = 2
 vframes = 4
 
@@ -121,7 +121,7 @@ sorting_offset = -0.9
 sorting_use_aabb_center = false
 alpha_cut = 1
 texture_filter = 0
-texture = ExtResource("2_phlnw")
+texture = ExtResource("1_dqgen")
 hframes = 2
 vframes = 4
 
@@ -131,7 +131,7 @@ sorting_offset = -0.9
 sorting_use_aabb_center = false
 alpha_cut = 1
 texture_filter = 0
-texture = ExtResource("2_phlnw")
+texture = ExtResource("1_dqgen")
 hframes = 2
 vframes = 4
 frame = 1
@@ -142,7 +142,7 @@ sorting_offset = 1.0
 modulate = Color(0.663824, 0.663824, 0.663824, 1)
 alpha_cut = 1
 texture_filter = 0
-texture = ExtResource("2_phlnw")
+texture = ExtResource("1_dqgen")
 hframes = 2
 vframes = 4
 frame = 6
@@ -156,7 +156,7 @@ sorting_offset = 1.0
 sorting_use_aabb_center = false
 alpha_cut = 1
 texture_filter = 0
-texture = ExtResource("2_phlnw")
+texture = ExtResource("1_dqgen")
 hframes = 2
 vframes = 4
 frame = 3
@@ -167,7 +167,7 @@ sorting_offset = -0.9
 sorting_use_aabb_center = false
 alpha_cut = 1
 texture_filter = 0
-texture = ExtResource("2_phlnw")
+texture = ExtResource("1_dqgen")
 hframes = 2
 vframes = 4
 frame = 5
@@ -178,7 +178,7 @@ sorting_offset = -0.9
 sorting_use_aabb_center = false
 alpha_cut = 1
 texture_filter = 0
-texture = ExtResource("2_phlnw")
+texture = ExtResource("1_dqgen")
 hframes = 2
 vframes = 4
 frame = 5
@@ -189,101 +189,7 @@ sorting_offset = -0.9
 sorting_use_aabb_center = false
 alpha_cut = 1
 texture_filter = 0
-texture = ExtResource("2_phlnw")
-hframes = 2
-vframes = 4
-frame = 6
-
-[node name="drawer2" type="Node3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0487961, -0.293637, -1.47764)
-
-[node name="Sprite3D6" type="Sprite3D" parent="drawer2"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.131687, 0.293859, 1.73783)
-sorting_offset = 1.0
-sorting_use_aabb_center = false
-alpha_cut = 1
-texture_filter = 0
-texture = ExtResource("2_phlnw")
-hframes = 2
-vframes = 4
-frame = 3
-
-[node name="Sprite3D7" type="Sprite3D" parent="drawer2"]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0.523091, 0.263428, 1.29152)
-sorting_offset = -0.9
-sorting_use_aabb_center = false
-alpha_cut = 1
-texture_filter = 0
-texture = ExtResource("2_phlnw")
-hframes = 2
-vframes = 4
-frame = 5
-
-[node name="Sprite3D8" type="Sprite3D" parent="drawer2"]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -0.389093, 0.263428, 1.29152)
-sorting_offset = -0.9
-sorting_use_aabb_center = false
-alpha_cut = 1
-texture_filter = 0
-texture = ExtResource("2_phlnw")
-hframes = 2
-vframes = 4
-frame = 5
-
-[node name="Sprite3D9" type="Sprite3D" parent="drawer2"]
-transform = Transform3D(-4.80825e-08, 1.1, -4.80825e-08, 0, -4.80825e-08, -1.1, -1.1, -4.80825e-08, 2.10175e-15, -0.144335, 0.3875, 1.29152)
-sorting_offset = -0.9
-sorting_use_aabb_center = false
-alpha_cut = 1
-texture_filter = 0
-texture = ExtResource("2_phlnw")
-hframes = 2
-vframes = 4
-frame = 6
-
-[node name="drawer3" type="Node3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0487961, -0.598898, -1.47764)
-
-[node name="Sprite3D6" type="Sprite3D" parent="drawer3"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.131687, 0.293859, 1.73783)
-sorting_offset = 1.0
-sorting_use_aabb_center = false
-alpha_cut = 1
-texture_filter = 0
-texture = ExtResource("2_phlnw")
-hframes = 2
-vframes = 4
-frame = 3
-
-[node name="Sprite3D7" type="Sprite3D" parent="drawer3"]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0.523091, 0.263428, 1.29152)
-sorting_offset = -0.9
-sorting_use_aabb_center = false
-alpha_cut = 1
-texture_filter = 0
-texture = ExtResource("2_phlnw")
-hframes = 2
-vframes = 4
-frame = 5
-
-[node name="Sprite3D8" type="Sprite3D" parent="drawer3"]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -0.389093, 0.263428, 1.29152)
-sorting_offset = -0.9
-sorting_use_aabb_center = false
-alpha_cut = 1
-texture_filter = 0
-texture = ExtResource("2_phlnw")
-hframes = 2
-vframes = 4
-frame = 5
-
-[node name="Sprite3D9" type="Sprite3D" parent="drawer3"]
-transform = Transform3D(-4.80825e-08, 1.1, -4.80825e-08, 0, -4.80825e-08, -1.1, -1.1, -4.80825e-08, 2.10175e-15, -0.144335, 0.3875, 1.29152)
-sorting_offset = -0.9
-sorting_use_aabb_center = false
-alpha_cut = 1
-texture_filter = 0
-texture = ExtResource("2_phlnw")
+texture = ExtResource("1_dqgen")
 hframes = 2
 vframes = 4
 frame = 6
@@ -294,15 +200,15 @@ libraries = {
 }
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.156119, 0.193115, -0.289734)
-shape = SubResource("BoxShape3D_3auuu")
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.160361, 0.193115, -0.289734)
+shape = SubResource("BoxShape3D_3o7i0")
 
 [node name="Area3D" type="Area3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1.23557)
 
 [node name="CollisionShape3D2" type="CollisionShape3D" parent="Area3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.179069, 0.193115, -0.421234)
-shape = SubResource("BoxShape3D_4mamg")
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.191611, 0.193115, -0.289734)
+shape = SubResource("BoxShape3D_tbk8r")
 
 [connection signal="body_entered" from="Area3D" to="." method="_on_area_3d_body_entered"]
 [connection signal="body_exited" from="Area3D" to="." method="_on_area_3d_body_exited"]

@@ -2,7 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://cmbnuib8o5qh1" path="res://sprites/ffloor.png" id="1_6svt6"]
 [ext_resource type="Texture2D" uid="uid://c7pq57w1yxoxu" path="res://sprites/waall.png" id="2_8hfcm"]
-[ext_resource type="Script" path="res://lookaroungcamo.gd" id="3_r77r3"]
+[ext_resource type="Script" path="res://$cript/lookaroungcamo.gd" id="3_r77r3"]
 [ext_resource type="Texture2D" uid="uid://b3nerkykyuau0" path="res://sprites/exitbutton.png" id="4_mwjbb"]
 [ext_resource type="Texture2D" uid="uid://cwotsu42ymp01" path="res://sprites/elevator.png" id="5_bo1te"]
 

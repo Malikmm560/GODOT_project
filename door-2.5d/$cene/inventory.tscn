@@ -1,6 +1,4 @@
-[gd_scene load_steps=2 format=3 uid="uid://dmy0ww4x0eksh"]
-
-[ext_resource type="Texture2D" uid="uid://fawl5cw606qq" path="res://sprites/extraitems.png" id="1_wp3oe"]
+[gd_scene format=3 uid="uid://dmy0ww4x0eksh"]
 
 [node name="Node2D" type="Node2D"]
 
@@ -46,7 +44,3 @@ offset_left = 147.0
 offset_top = -31.0
 offset_right = 203.0
 offset_bottom = 31.0
-
-[node name="Extraitems" type="Sprite2D" parent="."]
-position = Vector2(-357, 14)
-texture = ExtResource("1_wp3oe")

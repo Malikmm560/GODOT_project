@@ -2,9 +2,9 @@
 
 [ext_resource type="Texture2D" uid="uid://cmbnuib8o5qh1" path="res://sprites/ffloor.png" id="1_4s5y0"]
 [ext_resource type="Texture2D" uid="uid://c7pq57w1yxoxu" path="res://sprites/waall.png" id="2_wskm5"]
-[ext_resource type="PackedScene" uid="uid://fryr32qsh36q" path="res://plr.tscn" id="3_2iro3"]
+[ext_resource type="PackedScene" uid="uid://fryr32qsh36q" path="res://$cene/plr.tscn" id="3_2iro3"]
 [ext_resource type="Texture2D" uid="uid://dy3euhp8vb6d7" path="res://sprites/shop.png" id="4_u8ek8"]
-[ext_resource type="Texture2D" uid="uid://8n71kg3ftr6h" path="res://icon.svg" id="5_jmiuo"]
+[ext_resource type="Texture2D" uid="uid://8n71kg3ftr6h" path="res://sprites/icon.svg" id="5_jmiuo"]
 [ext_resource type="Texture2D" uid="uid://bm2swmekw0jav" path="res://sprites/doors.png" id="6_uihdt"]
 
 [sub_resource type="Environment" id="Environment_cwo46"]
