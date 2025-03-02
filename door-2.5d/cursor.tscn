@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3 uid="uid://dhi2ul0yhka0l"]
+
+[ext_resource type="Texture2D" uid="uid://b71si0w3wfkaa" path="res://sprites/cursor.png" id="1_hgagd"]
+
+[node name="Cursor" type="Node2D"]
+
+[node name="Sprite3D" type="Sprite2D" parent="."]
+position = Vector2(5, -1)
+scale = Vector2(0.322917, 0.333333)
+texture = ExtResource("1_hgagd")
+hframes = 3
