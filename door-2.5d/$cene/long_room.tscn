@@ -18,13 +18,13 @@ uv1_triplanar = true
 material = SubResource("StandardMaterial3D_qqx2v")
 size = Vector2(16, 8)
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_qxgu2"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_emtp4"]
 albedo_texture = ExtResource("3_yl5hs")
 uv1_scale = Vector3(0.3, 0.1, 0.3)
 uv1_triplanar = true
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_hjmtv"]
-material = SubResource("StandardMaterial3D_qxgu2")
+material = SubResource("StandardMaterial3D_emtp4")
 size = Vector2(16, 6)
 
 [sub_resource type="WorldBoundaryShape3D" id="WorldBoundaryShape3D_ylnud"]

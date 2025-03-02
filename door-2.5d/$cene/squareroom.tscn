@@ -1,0 +1,129 @@
+[gd_scene load_steps=12 format=3 uid="uid://cc08t2qy7ov46"]
+
+[ext_resource type="PackedScene" uid="uid://fryr32qsh36q" path="res://$cene/plr.tscn" id="1_bplao"]
+[ext_resource type="Texture2D" uid="uid://cmbnuib8o5qh1" path="res://sprites/ffloor.png" id="2_triad"]
+[ext_resource type="Texture2D" uid="uid://c7pq57w1yxoxu" path="res://sprites/waall.png" id="3_7lhx7"]
+[ext_resource type="Texture2D" uid="uid://bm2swmekw0jav" path="res://sprites/doors.png" id="4_ja7vp"]
+[ext_resource type="PackedScene" uid="uid://jj7ityrhe4v6" path="res://$cene/furniturechoicer.tscn" id="5_qqayp"]
+
+[sub_resource type="Environment" id="Environment_cwo46"]
+background_mode = 2
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_qqx2v"]
+albedo_texture = ExtResource("2_triad")
+uv1_scale = Vector3(0.3, 0.1, 0.3)
+uv1_triplanar = true
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_qjc2q"]
+material = SubResource("StandardMaterial3D_qqx2v")
+size = Vector2(12, 12)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_emtp4"]
+albedo_texture = ExtResource("3_7lhx7")
+uv1_scale = Vector3(0.3, 0.1, 0.3)
+uv1_triplanar = true
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_hjmtv"]
+material = SubResource("StandardMaterial3D_emtp4")
+size = Vector2(16, 6)
+
+[sub_resource type="WorldBoundaryShape3D" id="WorldBoundaryShape3D_ylnud"]
+
+[node name="long room" type="Node3D"]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_cwo46")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(0.97437, -0.0964894, 0.203206, 0, 0.903335, 0.428935, -0.224951, -0.417942, 0.880183, 0, 2.72066, -12.3382)
+light_energy = 0.5
+
+[node name="DirectionalLight3D2" type="DirectionalLight3D" parent="."]
+transform = Transform3D(0.97437, 0.0964894, -0.203206, 0, 0.903335, 0.428935, 0.224951, -0.417942, 0.880183, 0, 2.72066, -12.3382)
+light_energy = 0.5
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.982794, 0.184706, 0, -0.184706, 0.982794, 0, 4.10301, 10.1343)
+
+[node name="CharacterBody3D" parent="." groups=["plr"] instance=ExtResource("1_bplao")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.18861, 0, -2.72574)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="."]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D"]
+mesh = SubResource("PlaneMesh_qjc2q")
+skeleton = NodePath("../..")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 3, -6)
+mesh = SubResource("PlaneMesh_hjmtv")
+skeleton = NodePath("../..")
+
+[node name="MeshInstance3D3" type="MeshInstance3D" parent="StaticBody3D"]
+transform = Transform3D(-4.37114e-08, 1, -4.37114e-08, 0, -4.37114e-08, -1, -1, -4.37114e-08, 1.91069e-15, -6, 3, -2)
+mesh = SubResource("PlaneMesh_hjmtv")
+skeleton = NodePath("../..")
+
+[node name="MeshInstance3D4" type="MeshInstance3D" parent="StaticBody3D"]
+transform = Transform3D(-4.37114e-08, -1, 4.37114e-08, 0, -4.37114e-08, -1, 1, -4.37114e-08, 1.91069e-15, 6, 3, -2)
+mesh = SubResource("PlaneMesh_hjmtv")
+skeleton = NodePath("../..")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
+shape = SubResource("WorldBoundaryShape3D_ylnud")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, -6)
+shape = SubResource("WorldBoundaryShape3D_ylnud")
+
+[node name="CollisionShape3D5" type="CollisionShape3D" parent="StaticBody3D"]
+transform = Transform3D(-1, -8.74228e-08, 3.82137e-15, 0, -4.37114e-08, -1, 8.74228e-08, -1, 4.37114e-08, 0, 0, 6)
+shape = SubResource("WorldBoundaryShape3D_ylnud")
+
+[node name="CollisionShape3D3" type="CollisionShape3D" parent="StaticBody3D"]
+transform = Transform3D(-4.37114e-08, 1, -4.37114e-08, 0, -4.37114e-08, -1, -1, -4.37114e-08, 1.91069e-15, -6, 0, 0)
+shape = SubResource("WorldBoundaryShape3D_ylnud")
+
+[node name="CollisionShape3D4" type="CollisionShape3D" parent="StaticBody3D"]
+transform = Transform3D(-4.37114e-08, -1, 4.37114e-08, 0, -4.37114e-08, -1, 1, -4.37114e-08, 1.91069e-15, 6, 0, 0)
+shape = SubResource("WorldBoundaryShape3D_ylnud")
+
+[node name="Sprite3D" type="Sprite3D" parent="."]
+transform = Transform3D(-1.74846e-07, 0, -4, 0, 4, 0, 4, 0, -1.74846e-07, -5.8802, 1.27206, -2.84099)
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("4_ja7vp")
+hframes = 4
+frame = 1
+
+[node name="Sprite3D2" type="Sprite3D" parent="."]
+transform = Transform3D(-1.74846e-07, 0, -4, 0, 4, 0, 4, 0, -1.74846e-07, 5.97893, 1.27206, 3.30503)
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("4_ja7vp")
+hframes = 4
+frame = 1
+
+[node name="furniturechoicer" parent="." instance=ExtResource("5_qqayp")]
+transform = Transform3D(0.7, 0, 0, 0, 0.7, 0, 0, 0, 0.7, -3.02125, 0.486711, -5.26905)
+
+[node name="furniturechoicer7" parent="." instance=ExtResource("5_qqayp")]
+transform = Transform3D(0.7, 0, 0, 0, 0.7, 0, 0, 0, 0.7, 0.00112605, 0.486711, -5.26905)
+
+[node name="furniturechoicer5" parent="." instance=ExtResource("5_qqayp")]
+transform = Transform3D(-3.0598e-08, 0, 0.7, 0, 0.7, 0, -0.7, 0, -3.0598e-08, -5.32665, 0.486711, 4.62085)
+
+[node name="furniturechoicer8" parent="." instance=ExtResource("5_qqayp")]
+transform = Transform3D(-3.0598e-08, 0, 0.7, 0, 0.7, 0, -0.7, 0, -3.0598e-08, -5.32665, 0.486711, -0.305056)
+
+[node name="furniturechoicer10" parent="." instance=ExtResource("5_qqayp")]
+transform = Transform3D(-3.0598e-08, 0, 0.7, 0, 0.7, 0, -0.7, 0, -3.0598e-08, -5.32665, 0.486711, 2.27339)
+
+[node name="furniturechoicer6" parent="." instance=ExtResource("5_qqayp")]
+transform = Transform3D(-3.0598e-08, 0, -0.7, 0, 0.7, 0, 0.7, 0, -3.0598e-08, 5.30262, 0.486711, 0.80007)
+
+[node name="furniturechoicer9" parent="." instance=ExtResource("5_qqayp")]
+transform = Transform3D(-3.0598e-08, 0, -0.7, 0, 0.7, 0, 0.7, 0, -3.0598e-08, 5.30262, 0.486711, -2.34507)
+
+[node name="furniturechoicer3" parent="." instance=ExtResource("5_qqayp")]
+transform = Transform3D(0.7, 0, 0, 0, 0.7, 0, 0, 0, 0.7, 3.17205, 0.486711, -5.26905)
