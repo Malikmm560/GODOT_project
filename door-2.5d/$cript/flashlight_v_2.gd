@@ -21,7 +21,7 @@ func _process(delta):
 	var ray_direction = camera.project_ray_normal(mouse_pos)
 	var target_pos = ray_origin + ray_direction * 20.0
 	flashlight_light.position = target_pos
-	var direction = (Vector2(target_pos.x, target_pos.z) - Vector2(player.position.x, player.position.z)).normalized()
+	var direction = (Vector3(target_pos.x,target_pos.y, target_pos.z) - Vector3(player.position.x,player.position.y, player.position.z)).normalized()
 	var angle = atan2(direction.y, direction.x)
 
 	rotation = Vector3(0, 0, angle)

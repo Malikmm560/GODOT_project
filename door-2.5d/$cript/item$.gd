@@ -9,7 +9,6 @@ func _process(delta):
 	pass
 
 func _on_body_entered(body):
-	# $till ha$ $ome problem$ becau$e of the coin$
 	inv.n +=1
 	if inv.n == 1 and $Sprite3D.frame != 1 and $Sprite3D.frame != 2 and  $Sprite3D.frame !=3 :
 		$"../slot_1/Extraitems".frame = $Sprite3D.frame
