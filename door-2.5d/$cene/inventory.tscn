@@ -29,6 +29,21 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.27846, 1.19565, 0)
 [node name="Area3D9" parent="." instance=ExtResource("3_oeqjy")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.27846, 1.19565, 0)
 
+[node name="Area3D10" parent="." instance=ExtResource("3_oeqjy")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.27846, 1.19565, 0)
+
+[node name="Area3D11" parent="." instance=ExtResource("3_oeqjy")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.27846, 1.19565, 0)
+
+[node name="Area3D12" parent="." instance=ExtResource("3_oeqjy")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.27846, 1.19565, 0)
+
+[node name="Area3D13" parent="." instance=ExtResource("3_oeqjy")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.27846, 1.19565, 0)
+
+[node name="Area3D14" parent="." instance=ExtResource("3_oeqjy")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.27846, 1.19565, 0)
+
 [node name="Area3D2" parent="." instance=ExtResource("3_oeqjy")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.466, 1.19565, 0)
 
