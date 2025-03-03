@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://bqxfu8p17cmo1"]
+
+[node name="Node3D" type="Node3D"]
+
+[node name="OmniLight3D" type="OmniLight3D" parent="."]
+transform = Transform3D(1.0009, 0, 0, 0, 1.0009, 0, 0, 0, 1.0009, 0, 0, 0)
+light_color = Color(1, 1, 0.027451, 1)
+light_energy = 5.0
+light_size = 0.16
+omni_range = 20.0
+omni_attenuation = 7.061

@@ -123,7 +123,10 @@ text = "health"
 position = Vector2(537, 605)
 
 [node name="Node3D" parent="Sprite3D" instance=ExtResource("6_ywh2a")]
-transform = Transform3D(1.66673, 0.00744182, 0, -0.00823306, 1.5067, 0, 0, 0, 1, 0.333899, -0.224717, 0.218645)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 674, 393, 0)
+
+[node name="Node3D2" parent="Sprite3D" instance=ExtResource("6_ywh2a")]
+transform = Transform3D(2.54965, 0, 0, 0, 2.30462, 0, 0, 0, 3.965, 0.326411, -0.219662, 0.0724606)
 
 [node name="Camera3D" type="Camera3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 0.962871, 0.269962, 0, -0.269962, 0.962871, -0.0265791, 1.50668, 4.54581)
