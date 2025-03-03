@@ -1,13 +1,6 @@
 extends Area3D
 
-var tabel = {
-	"1" : $"../slot_1/Extraitems" ,
-	"2" : $"../slot_2/Extraitems2",
-	"3" : $"../slot_3/Extraitems3",
-	"4" : $"../slot_4/Extraitems4",
-	"5" : $"../slot_5/Extraitems5",
-	"6" : $"../slot_6/Extraitems6"
-}
+
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	$Sprite3D.frame = randi_range(0,7)
