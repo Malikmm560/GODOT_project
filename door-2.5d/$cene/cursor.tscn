@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://dhi2ul0yhka0l"]
 
 [ext_resource type="Texture2D" uid="uid://b71si0w3wfkaa" path="res://sprites/cursor.png" id="1_hgagd"]
-[ext_resource type="Script" path="res://cursor.gd" id="1_hnbwl"]
+[ext_resource type="Script" path="res://$cript/cursor.gd" id="1_hnbwl"]
 
 [node name="Cursor" type="Node2D"]
 

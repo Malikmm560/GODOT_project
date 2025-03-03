@@ -2,11 +2,11 @@
 
 [ext_resource type="Script" path="res://$cript/plr.gd" id="1_rlbvw"]
 [ext_resource type="Texture2D" uid="uid://d036830s8nvvm" path="res://sprites/plrcharadoor.png" id="2_dwhib"]
-[ext_resource type="Script" path="res://$cene/healthbar.gd" id="3_w7i14"]
+[ext_resource type="Script" path="res://$cript/healthbar.gd" id="3_w7i14"]
 [ext_resource type="PackedScene" uid="uid://dmy0ww4x0eksh" path="res://$cene/inventory.tscn" id="4_ixcqc"]
 [ext_resource type="Texture2D" uid="uid://fawl5cw606qq" path="res://sprites/extraitems.png" id="6_esbof"]
-[ext_resource type="PackedScene" uid="uid://dhi2ul0yhka0l" path="res://cursor.tscn" id="6_iqkhy"]
-[ext_resource type="PackedScene" uid="uid://cli7rpy1jjeb7" path="res://flashlight_v2.tscn" id="6_ywh2a"]
+[ext_resource type="PackedScene" uid="uid://dhi2ul0yhka0l" path="res://$cene/cursor.tscn" id="6_iqkhy"]
+[ext_resource type="PackedScene" uid="uid://cli7rpy1jjeb7" path="res://$cene/flashlight_v2.tscn" id="6_ywh2a"]
 
 [sub_resource type="Animation" id="Animation_adrxr"]
 length = 0.001

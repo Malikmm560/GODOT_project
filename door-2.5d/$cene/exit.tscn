@@ -1,7 +1,7 @@
 [gd_scene load_steps=7 format=3 uid="uid://dfnl7l27hjnt"]
 
 [ext_resource type="Texture2D" uid="uid://bm2swmekw0jav" path="res://sprites/doors.png" id="1_chahh"]
-[ext_resource type="Script" path="res://exiting.gd" id="1_wga3k"]
+[ext_resource type="Script" path="res://$cript/exiting.gd" id="1_wga3k"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_smy15"]
 size = Vector3(0.525024, 0.706909, 0.2323)

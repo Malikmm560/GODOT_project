@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://cli7rpy1jjeb7"]
 
 [ext_resource type="Texture2D" uid="uid://fawl5cw606qq" path="res://sprites/extraitems.png" id="1_f656l"]
-[ext_resource type="Script" path="res://flashlight_v_2.gd" id="1_h4itq"]
+[ext_resource type="Script" path="res://$cript/flashlight_v_2.gd" id="1_h4itq"]
 
 [node name="Node3D" type="Node3D"]
 script = ExtResource("1_h4itq")
