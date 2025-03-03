@@ -18,7 +18,10 @@ func _process(delta):
 	var mouse_pos = get_viewport().get_mouse_position()
 	var ray_origin = camera.project_ray_origin(mouse_pos)
 	var ray_direction = camera.project_ray_normal(mouse_pos)
-	var intersection_point = ray_origin + ray_direction * (flashlight_light.global_position.y - ray_origin.y) / ray_direction.y
+	var target_pos = ray_origin + ray_direction * 20.0  # Distance of projection
 
-	flashlight_light.look_at(intersection_point, Vector3.UP)
-	flashlight_sprite.look_at(intersection_point, Vector3.UP)
+	# Make the spotlight aim at the target position
+	flashlight_light.look_at(target_pos, Vector3.UP)
+
+	# Make the flashlight itself rotate towards the target position
+	flashlight_sprite.look_at(target_pos, Vector3.UP)
