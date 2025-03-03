@@ -7,7 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://8n71kg3ftr6h" path="res://sprites/icon.svg" id="5_2x5ev"]
 [ext_resource type="Texture2D" uid="uid://bm2swmekw0jav" path="res://sprites/doors.png" id="6_c47p2"]
 [ext_resource type="PackedScene" uid="uid://jj7ityrhe4v6" path="res://$cene/furniturechoicer.tscn" id="7_gu3ll"]
-[ext_resource type="PackedScene" uid="uid://dfnl7l27hjnt" path="res://$cene/exit.tscn" id="8_7byen"]
+[ext_resource type="PackedScene" path="res://$cene/exit.tscn" id="8_7byen"]
 
 [sub_resource type="Environment" id="Environment_cwo46"]
 background_mode = 2
