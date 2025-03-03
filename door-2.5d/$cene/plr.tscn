@@ -66,7 +66,7 @@ _data = {
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_7djul"]
 
-[node name="CharacterBody3D" type="CharacterBody3D"]
+[node name="plr" type="CharacterBody3D"]
 script = ExtResource("1_rlbvw")
 
 [node name="Sprite3D" type="Sprite3D" parent="."]
@@ -102,6 +102,7 @@ offset_top = 268.0
 offset_right = 980.0
 offset_bottom = 465.0
 theme_override_font_sizes/font_size = 56
+metadata/_edit_use_anchors_ = true
 
 [node name="ProgressBar" type="ProgressBar" parent="Sprite3D/healthbar/CanvasLayer"]
 modulate = Color(1, 0, 0, 1)
@@ -110,6 +111,7 @@ offset_top = 19.0
 offset_right = 298.0
 offset_bottom = 46.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
+metadata/_edit_use_anchors_ = true
 
 [node name="Label" type="Label" parent="Sprite3D/healthbar/CanvasLayer"]
 modulate = Color(0, 0, 0, 1)
