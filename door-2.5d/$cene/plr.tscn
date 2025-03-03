@@ -1,9 +1,10 @@
-[gd_scene load_steps=12 format=3 uid="uid://fryr32qsh36q"]
+[gd_scene load_steps=13 format=3 uid="uid://fryr32qsh36q"]
 
 [ext_resource type="Script" path="res://$cript/plr.gd" id="1_rlbvw"]
 [ext_resource type="Texture2D" uid="uid://d036830s8nvvm" path="res://sprites/plrcharadoor.png" id="2_dwhib"]
 [ext_resource type="Script" path="res://$cene/healthbar.gd" id="3_w7i14"]
 [ext_resource type="PackedScene" uid="uid://dmy0ww4x0eksh" path="res://$cene/inventory.tscn" id="4_ixcqc"]
+[ext_resource type="Texture2D" uid="uid://fawl5cw606qq" path="res://sprites/extraitems.png" id="6_esbof"]
 [ext_resource type="PackedScene" uid="uid://dhi2ul0yhka0l" path="res://cursor.tscn" id="6_iqkhy"]
 [ext_resource type="PackedScene" uid="uid://cli7rpy1jjeb7" path="res://flashlight_v2.tscn" id="6_ywh2a"]
 
@@ -66,7 +67,7 @@ _data = {
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_7djul"]
 
-[node name="CharacterBody3D" type="CharacterBody3D"]
+[node name="plr" type="CharacterBody3D"]
 script = ExtResource("1_rlbvw")
 
 [node name="Sprite3D" type="Sprite3D" parent="."]
@@ -102,6 +103,7 @@ offset_top = 268.0
 offset_right = 980.0
 offset_bottom = 465.0
 theme_override_font_sizes/font_size = 56
+metadata/_edit_use_anchors_ = true
 
 [node name="ProgressBar" type="ProgressBar" parent="Sprite3D/healthbar/CanvasLayer"]
 modulate = Color(1, 0, 0, 1)
@@ -110,6 +112,7 @@ offset_top = 19.0
 offset_right = 298.0
 offset_bottom = 46.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
+metadata/_edit_use_anchors_ = true
 
 [node name="Label" type="Label" parent="Sprite3D/healthbar/CanvasLayer"]
 modulate = Color(0, 0, 0, 1)
@@ -127,6 +130,18 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 674, 393, 0)
 
 [node name="Node3D2" parent="Sprite3D" instance=ExtResource("6_ywh2a")]
 transform = Transform3D(2.54965, 0, 0, 0, 2.30462, 0, 0, 0, 3.965, 0.326411, -0.219662, 0.0724606)
+
+[node name="Label" type="Label" parent="Sprite3D"]
+offset_left = 1113.0
+offset_top = 2.0
+offset_right = 1153.0
+offset_bottom = 25.0
+
+[node name="Extraitems" type="Sprite2D" parent="Sprite3D"]
+position = Vector2(1096, 14)
+texture = ExtResource("6_esbof")
+hframes = 8
+frame = 2
 
 [node name="Camera3D" type="Camera3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 0.962871, 0.269962, 0, -0.269962, 0.962871, -0.0265791, 1.50668, 4.54581)
