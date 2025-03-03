@@ -4,10 +4,10 @@
 [ext_resource type="Script" path="res://cursor.gd" id="1_hnbwl"]
 
 [node name="Cursor" type="Node2D"]
-script = ExtResource("1_hnbwl")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(106, 93.5)
-scale = Vector2(3.20833, 2.94792)
+position = Vector2(-1.4999, -1.75008)
+scale = Vector2(0.8, 0.8)
 texture = ExtResource("1_hgagd")
 hframes = 3
+script = ExtResource("1_hnbwl")

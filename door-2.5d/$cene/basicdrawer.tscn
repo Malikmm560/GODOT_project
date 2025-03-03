@@ -3,21 +3,6 @@
 [ext_resource type="Texture2D" uid="uid://b2br0ekm2gtu7" path="res://sprites/drawers.png" id="1_dqgen"]
 [ext_resource type="Script" path="res://$cript/opendrawer.gd" id="1_qlk3a"]
 
-[sub_resource type="Animation" id="Animation_7e2qh"]
-resource_name = "open1"
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("drawer1:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 1),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Vector3(0.0487961, -0.0383871, -1.47764), Vector3(0.0487961, -0.0383871, -0.718358)]
-}
-
 [sub_resource type="Animation" id="Animation_jiay2"]
 length = 0.001
 tracks/0/type = "value"
@@ -55,6 +40,21 @@ tracks/2/keys = {
 "transitions": PackedFloat32Array(1),
 "update": 0,
 "values": [Vector3(0.0487961, -0.598898, -1.47764)]
+}
+
+[sub_resource type="Animation" id="Animation_7e2qh"]
+resource_name = "open1"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("drawer1:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(0.0487961, -0.0383871, -1.47764), Vector3(0.0487961, -0.0383871, -0.718358)]
 }
 
 [sub_resource type="Animation" id="Animation_d8x56"]

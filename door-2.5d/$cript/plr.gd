@@ -16,6 +16,7 @@ func _ready():
 	#Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 	#flashlight = get_node("/root/room/Flashlight")
 	#flashlight = get_node("/root/room/flashlight")
+	Input.set_mouse_mode(Input.MOUSE_MODE_HIDDEN)
 	pass
 func _physics_process(delta):
 	

@@ -1,9 +1,10 @@
-[gd_scene load_steps=11 format=3 uid="uid://fryr32qsh36q"]
+[gd_scene load_steps=12 format=3 uid="uid://fryr32qsh36q"]
 
 [ext_resource type="Script" path="res://$cript/plr.gd" id="1_rlbvw"]
 [ext_resource type="Texture2D" uid="uid://d036830s8nvvm" path="res://sprites/plrcharadoor.png" id="2_dwhib"]
 [ext_resource type="Script" path="res://$cene/healthbar.gd" id="3_w7i14"]
 [ext_resource type="PackedScene" uid="uid://dmy0ww4x0eksh" path="res://$cene/inventory.tscn" id="4_ixcqc"]
+[ext_resource type="PackedScene" uid="uid://dhi2ul0yhka0l" path="res://cursor.tscn" id="6_iqkhy"]
 [ext_resource type="PackedScene" uid="uid://cli7rpy1jjeb7" path="res://flashlight_v2.tscn" id="6_ywh2a"]
 
 [sub_resource type="Animation" id="Animation_adrxr"]
@@ -121,6 +122,9 @@ text = "health"
 [node name="Node2D" parent="Sprite3D" instance=ExtResource("4_ixcqc")]
 position = Vector2(537, 605)
 
+[node name="Node3D" parent="Sprite3D" instance=ExtResource("6_ywh2a")]
+transform = Transform3D(1.66673, 0.00744182, 0, -0.00823306, 1.5067, 0, 0, 0, 1, 0.333899, -0.224717, 0.218645)
+
 [node name="Camera3D" type="Camera3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 0.962871, 0.269962, 0, -0.269962, 0.962871, -0.0265791, 1.50668, 4.54581)
 
@@ -133,5 +137,6 @@ libraries = {
 transform = Transform3D(0.879694, 0, 0, 0, 1, 0, 0, 0, 0.13959, 0.0128534, 0.965373, 0.0235141)
 shape = SubResource("CapsuleShape3D_7djul")
 
-[node name="Node3D" parent="." instance=ExtResource("6_ywh2a")]
-transform = Transform3D(1.66001, 0.135405, 0, -0.149788, 1.50062, 0, 0, 0, 1, 0.333899, 0.758708, 0.218645)
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Cursor" parent="CanvasLayer" instance=ExtResource("6_iqkhy")]
