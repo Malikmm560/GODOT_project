@@ -1,9 +1,10 @@
-[gd_scene load_steps=12 format=3 uid="uid://b35ftmbga8rmk"]
+[gd_scene load_steps=13 format=3 uid="uid://b35ftmbga8rmk"]
 
 [ext_resource type="PackedScene" uid="uid://fryr32qsh36q" path="res://$cene/plr.tscn" id="1_p737r"]
 [ext_resource type="Texture2D" uid="uid://cmbnuib8o5qh1" path="res://sprites/ffloor.png" id="2_f88gt"]
 [ext_resource type="Texture2D" uid="uid://c7pq57w1yxoxu" path="res://sprites/waall.png" id="3_svc0q"]
 [ext_resource type="Texture2D" uid="uid://cwotsu42ymp01" path="res://sprites/elevator.png" id="4_f7wpe"]
+[ext_resource type="PackedScene" uid="uid://dfnl7l27hjnt" path="res://$cene/exit.tscn" id="6_6msih"]
 [ext_resource type="PackedScene" uid="uid://jj7ityrhe4v6" path="res://$cene/furniturechoicer.tscn" id="6_vkcpi"]
 
 [sub_resource type="Environment" id="Environment_cwo46"]
@@ -127,3 +128,6 @@ transform = Transform3D(-3.0598e-08, 0, 0.7, 0, 0.7, 0, -0.7, 0, -3.0598e-08, -4
 
 [node name="furniturechoicer7" parent="." instance=ExtResource("6_vkcpi")]
 transform = Transform3D(-3.0598e-08, 0, 0.7, 0, 0.7, 0, -0.7, 0, -3.0598e-08, -4.89923, 0.486711, 4.21915)
+
+[node name="Area3D" parent="." instance=ExtResource("6_6msih")]
+transform = Transform3D(-0.163648, 0, -2.99553, 0, 3, 0, 2.99553, 0, -0.163648, 5.94104, 1.00392, -2.1131)

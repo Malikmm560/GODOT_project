@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=3 uid="uid://cosaxj7lmjsfe"]
+[gd_scene load_steps=19 format=3 uid="uid://cosaxj7lmjsfe"]
 
 [ext_resource type="PackedScene" uid="uid://fryr32qsh36q" path="res://$cene/plr.tscn" id="1_5tma3"]
 [ext_resource type="Texture2D" uid="uid://cmbnuib8o5qh1" path="res://sprites/ffloor.png" id="2_uyjne"]
@@ -7,6 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://8n71kg3ftr6h" path="res://sprites/icon.svg" id="5_2x5ev"]
 [ext_resource type="Texture2D" uid="uid://bm2swmekw0jav" path="res://sprites/doors.png" id="6_c47p2"]
 [ext_resource type="PackedScene" uid="uid://jj7ityrhe4v6" path="res://$cene/furniturechoicer.tscn" id="7_gu3ll"]
+[ext_resource type="PackedScene" uid="uid://dfnl7l27hjnt" path="res://$cene/exit.tscn" id="8_7byen"]
 
 [sub_resource type="Environment" id="Environment_cwo46"]
 background_mode = 2
@@ -401,6 +402,7 @@ light_energy = 0.5
 transform = Transform3D(1, 0, 0, 0, 0.927589, 0.373603, 0, -0.373603, 0.927589, 0, 4.40851, 8.51106)
 
 [node name="CharacterBody3D" parent="." groups=["plr"] instance=ExtResource("1_5tma3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.10914, 0, 0)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="."]
 
@@ -571,14 +573,6 @@ texture = ExtResource("6_c47p2")
 hframes = 4
 frame = 1
 
-[node name="Sprite3D2" type="Sprite3D" parent="."]
-transform = Transform3D(-1.74846e-07, 0, -4, 0, 4, 0, 4, 0, -1.74846e-07, 7.99109, 1.27206, 0)
-alpha_cut = 1
-texture_filter = 0
-texture = ExtResource("6_c47p2")
-hframes = 4
-frame = 1
-
 [node name="furniturechoicer" parent="." instance=ExtResource("7_gu3ll")]
 transform = Transform3D(0.7, 0, 0, 0, 0.7, 0, 0, 0, 0.7, -3.53483, 0.486711, -3.15618)
 
@@ -596,3 +590,6 @@ transform = Transform3D(0.7, 0, 0, 0, 0.7, 0, 0, 0, 0.7, 3.25627, 0.486711, -3.1
 
 [node name="furniturechoicer4" parent="." instance=ExtResource("7_gu3ll")]
 transform = Transform3D(0.7, 0, 0, 0, 0.7, 0, 0, 0, 0.7, 6.23249, 0.486711, -3.15618)
+
+[node name="Area3D" parent="." instance=ExtResource("8_7byen")]
+transform = Transform3D(0.0459359, 0, -3.99974, 0, 4, 0, 3.99974, 0, 0.0459359, 7.94322, 1.37455, 0)

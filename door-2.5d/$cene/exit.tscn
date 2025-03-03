@@ -1,0 +1,102 @@
+[gd_scene load_steps=7 format=3 uid="uid://dfnl7l27hjnt"]
+
+[ext_resource type="Texture2D" uid="uid://bm2swmekw0jav" path="res://sprites/doors.png" id="1_chahh"]
+[ext_resource type="Script" path="res://exiting.gd" id="1_wga3k"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_smy15"]
+size = Vector3(0.525024, 0.706909, 0.2323)
+
+[sub_resource type="Animation" id="Animation_vyorp"]
+resource_name = "open"
+step = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite3D:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5, 1),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector3(0, 0, 0), Vector3(-0.133774, 0, 0.19956), Vector3(-0.363514, 0, 0.0948863)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sprite3D:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.5, 1),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector3(0, 0, 0), Vector3(0, -1.31843, 0), Vector3(0, -2.63686, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_ymgtv"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite3D:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sprite3D:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_hnnsv"]
+_data = {
+"RESET": SubResource("Animation_ymgtv"),
+"open": SubResource("Animation_vyorp")
+}
+
+[node name="Area3D" type="Area3D"]
+script = ExtResource("1_wga3k")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00164795, 0.0487671, 0.0707397)
+shape = SubResource("BoxShape3D_smy15")
+
+[node name="Sprite3D" type="Sprite3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("1_chahh")
+hframes = 4
+frame = 1
+
+[node name="Label3D" type="Label3D" parent="Sprite3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.207259, 0.011611)
+text = "1"
+
+[node name="Sprite3D2" type="Sprite3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.00811231)
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("1_chahh")
+hframes = 4
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_hnnsv")
+}
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_body_exited"]
