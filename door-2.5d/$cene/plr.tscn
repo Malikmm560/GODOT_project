@@ -1,9 +1,10 @@
-[gd_scene load_steps=12 format=3 uid="uid://fryr32qsh36q"]
+[gd_scene load_steps=13 format=3 uid="uid://fryr32qsh36q"]
 
 [ext_resource type="Script" path="res://$cript/plr.gd" id="1_rlbvw"]
 [ext_resource type="Texture2D" uid="uid://d036830s8nvvm" path="res://sprites/plrcharadoor.png" id="2_dwhib"]
 [ext_resource type="Script" path="res://$cene/healthbar.gd" id="3_w7i14"]
 [ext_resource type="PackedScene" uid="uid://dmy0ww4x0eksh" path="res://$cene/inventory.tscn" id="4_ixcqc"]
+[ext_resource type="Texture2D" uid="uid://fawl5cw606qq" path="res://sprites/extraitems.png" id="6_esbof"]
 [ext_resource type="PackedScene" uid="uid://dhi2ul0yhka0l" path="res://cursor.tscn" id="6_iqkhy"]
 [ext_resource type="PackedScene" uid="uid://cli7rpy1jjeb7" path="res://flashlight_v2.tscn" id="6_ywh2a"]
 
@@ -129,6 +130,18 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 674, 393, 0)
 
 [node name="Node3D2" parent="Sprite3D" instance=ExtResource("6_ywh2a")]
 transform = Transform3D(2.54965, 0, 0, 0, 2.30462, 0, 0, 0, 3.965, 0.326411, -0.219662, 0.0724606)
+
+[node name="Label" type="Label" parent="Sprite3D"]
+offset_left = 1113.0
+offset_top = 2.0
+offset_right = 1153.0
+offset_bottom = 25.0
+
+[node name="Extraitems" type="Sprite2D" parent="Sprite3D"]
+position = Vector2(1096, 14)
+texture = ExtResource("6_esbof")
+hframes = 8
+frame = 2
 
 [node name="Camera3D" type="Camera3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 0.962871, 0.269962, 0, -0.269962, 0.962871, -0.0265791, 1.50668, 4.54581)

@@ -1,5 +1,7 @@
 extends CharacterBody3D
 
+@onready var label = $Sprite3D/Label
+
 @onready var ani = $AnimationPlayer
 
 const SPEED = 5.0
@@ -19,7 +21,7 @@ func _ready():
 	Input.set_mouse_mode(Input.MOUSE_MODE_HIDDEN)
 	pass
 func _physics_process(delta):
-	
+	label.text = str(inv.coin)
 	if not is_on_floor():
 		velocity += get_gravity() * delta
 
