@@ -23,6 +23,7 @@ offset_bottom = 31.0
 
 [node name="Extraitems" type="Sprite2D" parent="slot_1"]
 visible = false
+texture_filter = 1
 position = Vector2(28, 32)
 scale = Vector2(1.59375, 1.59375)
 texture = ExtResource("1_3jwr4")
@@ -36,6 +37,7 @@ offset_bottom = 31.0
 
 [node name="Extraitems2" type="Sprite2D" parent="slot_2"]
 visible = false
+texture_filter = 1
 position = Vector2(28, 32)
 scale = Vector2(1.59375, 1.59375)
 texture = ExtResource("1_3jwr4")
@@ -49,6 +51,7 @@ offset_bottom = 31.0
 
 [node name="Extraitems3" type="Sprite2D" parent="slot_3"]
 visible = false
+texture_filter = 1
 position = Vector2(28, 32)
 scale = Vector2(1.59375, 1.59375)
 texture = ExtResource("1_3jwr4")
@@ -62,6 +65,7 @@ offset_bottom = 31.0
 
 [node name="Extraitems4" type="Sprite2D" parent="slot_4"]
 visible = false
+texture_filter = 1
 position = Vector2(27, 32)
 scale = Vector2(1.59375, 1.59375)
 texture = ExtResource("1_3jwr4")
@@ -75,6 +79,7 @@ offset_bottom = 31.0
 
 [node name="Extraitems5" type="Sprite2D" parent="slot_5"]
 visible = false
+texture_filter = 1
 position = Vector2(30, 33)
 scale = Vector2(1.59375, 1.59375)
 texture = ExtResource("1_3jwr4")
@@ -88,6 +93,7 @@ offset_bottom = 31.0
 
 [node name="Extraitems6" type="Sprite2D" parent="slot_6"]
 visible = false
+texture_filter = 1
 position = Vector2(27, 33)
 scale = Vector2(1.59375, 1.59375)
 texture = ExtResource("1_3jwr4")
