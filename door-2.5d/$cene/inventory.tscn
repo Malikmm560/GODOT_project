@@ -8,45 +8,6 @@
 [node name="Area3D" parent="." instance=ExtResource("3_oeqjy")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.787327, 1.19565, 0)
 
-[node name="Area3D3" parent="." instance=ExtResource("3_oeqjy")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.094284, 1.19565, 0)
-
-[node name="Area3D4" parent="." instance=ExtResource("3_oeqjy")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.63269, 1.19565, 0)
-
-[node name="Area3D5" parent="." instance=ExtResource("3_oeqjy")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.921776, 1.19565, 0)
-
-[node name="Area3D6" parent="." instance=ExtResource("3_oeqjy")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.81121, 1.19565, 0)
-
-[node name="Area3D7" parent="." instance=ExtResource("3_oeqjy")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.27846, 1.19565, 0)
-
-[node name="Area3D8" parent="." instance=ExtResource("3_oeqjy")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.27846, 1.19565, 0)
-
-[node name="Area3D9" parent="." instance=ExtResource("3_oeqjy")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.27846, 1.19565, 0)
-
-[node name="Area3D10" parent="." instance=ExtResource("3_oeqjy")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.27846, 1.19565, 0)
-
-[node name="Area3D11" parent="." instance=ExtResource("3_oeqjy")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.27846, 1.19565, 0)
-
-[node name="Area3D12" parent="." instance=ExtResource("3_oeqjy")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.27846, 1.19565, 0)
-
-[node name="Area3D13" parent="." instance=ExtResource("3_oeqjy")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.27846, 1.19565, 0)
-
-[node name="Area3D14" parent="." instance=ExtResource("3_oeqjy")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.27846, 1.19565, 0)
-
-[node name="Area3D2" parent="." instance=ExtResource("3_oeqjy")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.466, 1.19565, 0)
-
 [node name="ColorRect" type="ColorRect" parent="."]
 offset_left = -160.0
 offset_top = -45.0
