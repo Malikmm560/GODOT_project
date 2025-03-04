@@ -82,8 +82,8 @@ hframes = 4
 frame = 1
 
 [node name="Label3D" type="Label3D" parent="Sprite3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.207259, 0.011611)
-text = "1"
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0187978, 0.207259, 0.011611)
+text = "69"
 
 [node name="Sprite3D2" type="Sprite3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.00811231)
